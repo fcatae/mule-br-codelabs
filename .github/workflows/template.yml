@@ -1,0 +1,30 @@
+name: Template - Run claat
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-codelab:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Source Code (git)
+        uses: actions/checkout@v2
+        with:
+          ref: dev
+
+      - name: Generate Code Labs Content
+        uses: ./.github/actions/claat
+        with:
+          client-id: ${{ secrets.clientId }}
+          client-secret: ${{ secrets.clientSecret }}
+          refresh-token: ${{ secrets.refreshToken }}          
+          doc-id: 1vr9zrrtGbCUvgm5c_L_ogO5UfT5yE_l3jos2cDYBrBI
+          
+      - name: Commit Code (Dev Environment)
+        run: |
+          date > dist/generated.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Action: ${{ github.workflow }} # ${{ github.run_number }}"
+          git push

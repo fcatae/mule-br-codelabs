@@ -1,0 +1,22 @@
+name: 'Run claat'
+description: 'Run claat tool to generate HTML files'
+inputs:
+  client-id: 
+    description: 'Client Id'
+    required: true
+  client-secret: 
+    description: 'Client Secret'
+    required: true
+  refresh-token: 
+    description: 'Refresh Token'
+    required: true   
+  doc-id:  
+    description: 'Google Document Id'
+    required: true  
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        access_token=$(${{ github.action_path }}/go-generate-token -client=${{ inputs.client-id }} -secret=${{ inputs.client-secret }} -refresh=${{ inputs.refresh-token }})
+        ${{ github.action_path }}/claat-linux-amd64 export -auth $access_token -o codelabs ${{ inputs.doc-id }}
+      shell: bash
