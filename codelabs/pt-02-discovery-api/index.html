@@ -1,0 +1,97 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Discovery</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="pt-02-discovery-api"
+                  title="Discovery"
+                  environment="web"
+                  feedback-link="https://github.com/fcatae">
+    
+      <google-codelab-step label="Aumente a documentação de sua API" duration="0">
+        <p>Publicar sua API para o <strong>Exchange</strong> é tão fácil quanto alguns cliques. No entanto, o Exchange realmente apenas capturou os atributos básicos e a documentação para sua API neste ponto. Garantir que sua API seja fácil de encontrar e &#34;pronta para o autoatendimento&#34; é sua responsabilidade como designer de API. Vamos encontrar nossa API no <strong>Exchange</strong> e adicionar mais à nossa documentação API.</p>
+<ol type="1" start="1">
+<li>Navegue até o <strong>Exchange</strong> no &#34;menu lateral &#34; no canto superior esquerdo do Design Center.</li>
+</ol>
+<p class="image-container"><img alt="module1 lab3 navigate to exchange" style="width: 382.23px" src="img/3eb052766f4393ad.png"></p>
+<p class="image-container"><img alt="module1 lab3 navigate to exchange2" style="width: 380.11px" src="img/b3a8a2e2e044f49d.png"></p>
+<ol type="1" start="2">
+<li>Use a barra de pesquisa para encontrar sua API se ela não estiver visível na lista de ativos do Exchange. Clique em sua API assim que encontrá-la:<br><img alt="module1 lab3 exchange assets select" style="width: 716.73px" src="img/4b4b2285929acafb.png"></li>
+<li>Clique em um dos botões &#34;Edit&#34; para entrar no modo de edição.<br><img alt="module1 lab3 exchange edit" style="width: 718.11px" src="img/dc61fe36c7bfda9f.png"></li>
+</ol>
+<p>Os ativos do Exchange são documentados usando a linguagem &#34;markdown&#34;. A linguagem Markdown é uma sintaxe independente de formato usada para criar documentação independente de como ela será processada (ou seja, HTML, PDF, texto, etc.). Ele é usado por plataformas populares como o GitHub como a forma padrão de criar documentação de software. Para obter mais informações sobre markdown, consulte:<br><a href="https://guides.github.com/features/mastering-markdown/" target="_blank">https://guides.github.com/features/mastering-markdown/</a></p>
+<p>Crie sua própria documentação para sua API ou copie o seguinte texto no editor:</p>
+<p><code>A ** Omni Channel Experience API * * é usado para simplificar o acesso a pedidos, produtos e recursos do carrinho de compras necessários para aplicativos móveis e de e-commerce.</code></p>
+<p><code>Os desenvolvedores que precisam podem facilmente compor aplicações inovadoras utilizando esta API para fazer o seguinte:</code></p>
+<p><code> - Recuperar o Catálogo de Produtos e detalhes sobre um produto</code></p>
+<p><code> - Adicionar produtos a um carrinho de compras com estado</code></p>
+<p><code> - Pesquisar pedidos e recuperar seu status</code></p>
+<p><code> - Criar um novo pedido</code></p>
+<p class="image-container"><img alt="module1 lab3 exchange editor markdown" style="width: 716.62px" src="img/6c203094f805216c.png"></p>
+<table>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Se preferir a edição WYSIWYG, então você pode clicar no botão &#34;Visual&#34; na parte superior e ser apresentado a um editor visual em vez do editor baseado em markdown. </p>
+</td></tr>
+</table>
+<ol type="1" start="4">
+<li>Clique no botão <strong>&#34;Save as Draft&#34;</strong> na parte inferior da tela. Seu rascunho da documentação da API é salvo, mas não publicado, até que você publique formalmente as atualizações finais ao Exchange, portanto, fique à vontade para salvar vários rascunhos à medida que cria sua documentação.<br><img alt="module1 lab3 exchange editor draft page" style="width: 716.81px" src="img/b79642ba724e0caa.png"></li>
+</ol>
+<ul>
+<li>Você pode pressionar <code>Publish</code>, <code>Discard draft</code>ou <code>Exit draft</code>.</li>
+<li><strong>Publish</strong> - Publicar alterações na documentação para troca</li>
+<li><strong>Discard draft -</strong> Descartar alterações</li>
+<li><strong>Exit Draft </strong>- Manter as alterações, mas não publicar no Exchange</li>
+</ul>
+<ol type="1" start="5">
+<li>Pressione o botão <code>Publish</code>. Suas alterações na documentação agora estão visíveis no Exchange!<br><img alt="module1 lab3 exchange editor final page" style="width: 716.67px" src="img/b8f55d6d2044d950.png"><br>A documentação do Exchange pode ser composta por várias páginas. Até agora, acabamos de criar a página inicial de nossa API.<br>É prática comum incluir links para outros conteúdos, como tutoriais em vídeo, em nossa documentação do Exchange. Isso torna mais fácil para o desenvolvedor interessado obter acesso a toda a documentação necessária para aprender como usar a API.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Valide a API" duration="0">
+        <p>Como no Design Center, no Exchange você pode olhar o <strong>Resumo da API</strong>. O <strong>Resumo da API</strong> oferece a oportunidade de fazer uma solicitação e chamar o serviço mockado ou uma implementação da API.</p>
+<p>Vamos ver como isso pode ser feito.</p>
+<ol type="1" start="1">
+<li>Vá para &#34;<strong>Summary</strong>&#34;<br><img alt="module1 lab4 exchange api summary" style="width: 715.69px" src="img/e29a01398d792e16.png"></li>
+<li>Pressione / products / search <code>[GET]<br></code><img alt="module1 lab4 exchange product search" style="width: 716.70px" src="img/8c80ba01c055099d.png"></li>
+<li>No lado direito do painel você verá o método <strong>GET</strong> a ser chamado.<br>Você pode selecionar em uma lista de combinação de terminais de implementação disponíveis para chamar. Nesse caso, temos apenas o serviço mockado e o que está definido na especificação.<br>Você pode ver os <strong>parâmetros</strong> e <strong>cabeçalhos</strong> como eles são preenchidos.<br>Na aba <strong>Parameters,</strong> você pode clicar na caixa de seleção e ver todos os parâmetros opcionais que podem ser enviados.<br><img alt="module1 lab4 product search" style="width: 717.14px" src="img/159ce7bfde8d1dda.png"></li>
+<li>Pressione <strong>SEND</strong> e veja o que acontece.<br><img alt="module1 lab4 exchange product search response" style="width: 453.84px" src="img/c5679a55d060c84c.png"><br>Você pode ver a resposta simulada e pode ver::</li>
+</ol>
+<ul>
+<li><img alt="module1_lab4_http_response" style="width: 148.50px" src="img/bb1c4fb07959c428.png">Aqui você pode ver a resposta http e o tempo de resposta</li>
+<li><img style="width: 289.95px" src="img/3477e460adc2f32e.png">Esses permitem que você baixe a resposta, copie a resposta para a área de transferência e formate de uma maneira melhor.</li>
+<li><img alt="module1_lab4_details" style="width: 92.50px" src="img/451d5f5627457c9e.png">: Finalmente, há uma guia de detalhes que mostrará os detalhes da solicitação. Cabeçalhos de URL, resposta e solicitação.<br><img alt="module1 lab4 response details" style="width: 529.07px" src="img/e3d107fc1ab56e3b.png"></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
