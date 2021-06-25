@@ -1,4 +1,4 @@
-name: Template - Run claat
+name: pt-04-manage-api
 
 on:
   workflow_dispatch:

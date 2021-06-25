@@ -1,4 +1,4 @@
-name: Template - Run claat
+name: pt-01-design-api
 
 on:
   workflow_dispatch:
