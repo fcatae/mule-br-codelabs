@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-06-25T00:27:32Z",
+  "id": "es-m1-disenar-api",
+  "duration": 0,
+  "title": "M1: Diseñar una especificación para la API",
+  "authors": "Andre Strenger",
+  "summary": "Vamos a tomar el papel del diseñador API y explorar cómo diseñar la API de experiencia en el uso del enfoque Desing First con la metodología de API-Led Connectivity de MuleSoft.",
+  "source": "1FpxUEBtJNzb1olvGlfGNRbeBPBp2UKPsAuespv7oZyY",
+  "theme": "web",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/fcatae",
+  "url": "es-m1-disenar-api"
+}
