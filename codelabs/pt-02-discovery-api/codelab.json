@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-06-25T21:32:00Z",
+  "id": "pt-02-discovery-api",
+  "duration": 0,
+  "title": "Discovery",
+  "authors": "Andre Strenger",
+  "summary": "Discovery",
+  "source": "1scRVQIHuoqOi6X3ANonYsyVQ8Wosi1tIRUn4Lre_Frg",
+  "theme": "web",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/fcatae",
+  "url": "pt-02-discovery-api"
+}

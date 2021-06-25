@@ -1,0 +1,158 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Design</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="pt-01-design-api"
+                  title="Design"
+                  environment="web"
+                  feedback-link="https://github.com/fcatae">
+    
+      <google-codelab-step label="Crie uma especificação para sua API" duration="0">
+        <p>Vamos assumir o papel de designer de API e explorar como criar uma API usando uma abordagem <strong>Design First</strong> com a metodologia de conectividade baseada em APIs da MuleSoft. O objetivo de nossa abordagem de <strong>Design First</strong> é ser capaz de projetar APIs que sejam fáceis de usar para o público-alvo pretendido.</p>
+<p class="image-container"><img alt="API Visual Config" style="width: 630.00px" src="img/649f43a4f165fd55.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Crie a API, Omni Channel Experience" duration="0">
+        <p>Nesta etapa, você criará uma API usando o <strong>Anypoint Design Center.</strong></p>
+<ol type="1" start="1">
+<li>Você pode acessar o <strong>Anypoint Design Center</strong> na página inicial do Anypoint Platform:<br><br><img alt="Anypoint Platform Home Page" style="width: 845.50px" src="img/a41f7a8f2c02cc3.png"><br><br>Alternativamente, você pode usar o &#34;menu lateral&#34; em qualquer página do portal Anypoint Platform para navegar até o <strong>Design Center</strong>: <br><br><img alt="Hamburger Menu" style="width: 832.50px" src="img/664a4011e0648427.png"><br></li>
+</ol>
+<p class="image-container"><img alt="Hamburger Menu Selection" style="width: 866.50px" src="img/753edb99d0f8baa3.png"><br></p>
+<ol type="1" start="2">
+<li><strong>Anypoint Design Center</strong> é usado para criar suas APIs. Ao chegar na página inicial do <strong>Design Center</strong>, você verá uma lista de APIs que já foram projetadas por sua organização.<br><br><img alt="Design Center Home" style="width: 818.50px" src="img/41b94d3e3c058e03.png"><br></li>
+<li>Para criar uma nova API, clique no botão <strong>Create New</strong>.<br><br><img alt="Create Button" style="width: 902.50px" src="img/9c9091925b628f7.png"><br></li>
+<li>Selecione <strong>New API Spec</strong>.<br><br><img alt="Create Button" style="width: 931.50px" src="img/aea5f2ccb7e0ff35.png"><br></li>
+<li>Defina os seguintes valores no formulário para Adicionar a API:</li>
+</ol>
+<ul>
+<li>Nome da API: <strong>&lt;username&gt; - API Omni Channel Experience</strong>.</li>
+<li>Como você deseja redigir as especificações da API? Selecione a opção <strong>Guide me through it </strong> .<br><br><em>Observação: como estamos trabalhando em uma organização compartilhada, dê à sua API um nome exclusivo. Para os fins deste exercício, acrescente a sua API o nome de usuário da sua conta Anypoint.<br></em><img alt="Create Button" style="width: 870.50px" src="img/c440831d61592719.png"></li>
+</ul>
+<ol type="1" start="6">
+<li>Clique em <strong>Create API Spec</strong>. Isso criará a estrutura básica de sua especificação de API baseada em RAML. </li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Criar o recurso de lista de pedidos" duration="0">
+        <p>Para fornecer a funcionalidade de tratamento de pedidos para a plataforma de comércio eletrônico, criaremos um recurso de lista em nossa API usando RAML.</p>
+<p><strong>Anypoint Design Center</strong> fornecerá um editor de API visual para começar com um tutorial passo a passo para guiá-lo através do design de sua API visualmente.<br></p>
+<p class="image-container"><img alt="API Editor" style="width: 865.50px" src="img/ebedccc286d9d72.png"><br></p>
+<ol type="1" start="1">
+<li>Vamos criar nossa API e pular o tutorial por enquanto.</li>
+<li>Vamos adicionar alguns detalhes gerais sobre a API.</li>
+</ol>
+<ul>
+<li>Nomeie a API configurando o <strong>Title</strong> como <strong><code><username> Omni Channel Experience API</code></strong><code>.</code></li>
+<li>Como este é nosso primeiro design, vamos designar essa API como <strong>Version </strong><code>1.0.</code> Definir versão para <code>1.0</code></li>
+<li>Defina o <strong>Media type</strong> para <code>application/json</code>.</li>
+</ul>
+<p>Agora você deve ver o seguinte em seu design de API:<br><br><img alt="API Visual Config" style="width: 831.50px" src="img/649f43a4f165fd55.png"><br></p>
+<ol type="1" start="3">
+<li>Agora você precisa adicionar um recurso. Um recurso é a definição de uma entidade que sua API irá gerenciar. Clique no <strong>+</strong> à direita de <strong>Resources  </strong>e escolha  <strong>Add resources </strong>.<br><br><img alt="API Add Resource" style="width: 849.50px" src="img/2e698b306f9670a7.png"><br></li>
+<li>Renomeie o recurso de /new-resource para <code>/order</code>. Selecione a opção <strong>POST</strong> e  na documentação, dê uma descrição: <code>Creates a new order instance</code> conforme mostrado. Observe o RAML gerado à direita.<br><br><img alt="module1 lab2 raml post" style="width: 828.50px" src="img/c56a93de32b037c1.png"><br><br>Parabéns! Você concluiu a criação de um recurso <strong>/order</strong> com uma descrição básica.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Criar o recurso de instância do pedido" duration="0">
+        <p>Na etapa anterior, criamos um recurso de coleta do pedido e o método <strong>POST</strong> para permitir que a aplicação de e-commerce crie uma nova instância do pedido. E se quiséssemos permitir que a aplicação de comércio eletrônico obtivesse o status de um único pedido? Precisamos criar um novo recurso sob a instância <strong>Order</strong> e usar o método <strong>GET</strong>.</p>
+<ol type="1" start="1">
+<li>Passe o cursor do mouse sobre o recurso <strong>/order</strong>. Você notará que um <code>+</code> aparece no painel de recursos.</li>
+<li>Renomeie <strong>/order/new-resource </strong>para <code>/order/{order_id}</code>.<br><br><img alt="module1 lab2 add nested resource" style="width: 942.50px" src="img/2dbfff36f0c22b0c.gif"><br><br></li>
+<li>Como fizemos na etapa anterior, insira uma descrição: <code>Order instance resource allowing to retrieve an order<br><br></code><img alt="module1 lab2 design center api orders get description" style="width: 856.50px" src="img/aabfed8611e2ce0f.png"><br></li>
+<li>No método <strong>GET</strong>, clique na guia <strong>Responses</strong> e, em seguida, clique no botão <strong>Add New Response.<br><br></strong><img alt="module1 lab2 design center api orders get new response" style="width: 870.50px" src="img/7c109b72564103ff.png"><br></li>
+<li>Agora você deve ver uma resposta com um código de resposta 200 OK.<br><br><img alt="module1 lab2 design center api orders get response 200" style="width: 830.50px" src="img/2d5a51d2d3725ea4.png"><br></li>
+<li>Abaixo da resposta, clique em <strong>Add Body</strong> para adicionar uma resposta JSON ao método <strong>GET</strong>.<br><br><img alt="module1 lab2 get response add body" style="width: 838.50px" src="img/b18fab940a33e232.png"><br></li>
+<li>Observe a especificação RAML à direita atualizada com o corpo.<br><br><img alt="module1 lab2 add response body" style="width: 910.50px" src="img/e49777a1698b2154.png"><br></li>
+<li>Vamos adicionar um exemplo de JSON à resposta. Precisamos expandir a seção <strong>Bodies</strong> clicando em &#34;<strong>Details</strong>&#34;.<br><br><img alt="module1 lab2 expand response body" style="width: 887.50px" src="img/b3955be5f0bd17c6.png"><br></li>
+<li>Depois de expandida, você verá a seção &#34;<strong>Example</strong>&#34;.<br><br><img alt="module1 lab2 expanded response body" style="width: 807.50px" src="img/a1a5496cd8dde75b.png"><br></li>
+</ol>
+<p>10. Em &#34;<strong>Example</strong>&#34;, clique na guia <strong>Edit</strong> e copie / cole o seguinte código JSON<br><br><img alt="module1 lab2 add example" style="width: 824.50px" src="img/3fe44a2e5d48f2dc.png"><br></p>
+<pre><code>{
+        &#34;order_id&#34;: &#34;order_22&#34;,
+  &#34;tracking_code&#34;: &#34;12310391209318&#34;,
+  &#34;rel_self&#34;: &#34;http://alc.mulesoft.com / api / orders / oder / order_22 &#34;,
+  &#34; creation_date &#34;:&#34; 2015/12/31 10:00:00 &#34;,
+  &#34; cost &#34;: {
+    &#34; price &#34;: 12,
+    &#34; tax &#34;: 1,
+    &#34; final_price &#34;: 13
+  } ,
+  &#34;shipping&#34;: {
+    &#34;shipping_address_id&#34;: &#34;1122&#34;,
+    &#34;rel_address&#34;: &#34;http://alc.mulesoft.com/api/users/user/vip_user_8/address/1122&#34;
+  },
+  &#34;items&#34;: [
+    {
+      &#34; product_id &#34;:&#34; 121 &#34;,
+      &#34; rel_product &#34;:&#34; http://alc.mulesoft.com/api/products/product/121 &#34;,
+      &#34; quantidade &#34;: 1
+    },
+    {
+      &#34; product_id &#34;:&#34; 122 &#34;,
+      &#34; rel_product &#34; : &#34;http://alc.mulesoft.com/api/products/product/122&#34;,
+      &#34;quantidade&#34;: 2
+    }
+  ]
+}</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Alternando entre a visualização RAML e OAS" duration="0">
+        <p>Dentro da plataforma Anypoint você pode trabalhar com RAML e OAS perfeitamente. Você pode verificar isso indo para o painel direito, onde o código de especificação é mostrado, e selecionando na parte inferior a guia <strong><code>OAS</code></strong>.<br></p>
+<p class="image-container"><img alt="module1 lab2 design center oas console" style="width: 378.00px" src="img/3e98a5bb67b72517.gif"><br></p>
+<p>Clique na guia <strong><code>RAML</code></strong> para continuar com a próxima etapa.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Publique sua API no Anypoint Exchange" duration="0">
+        <ol type="1" start="1">
+<li>Clique no botão <strong>Publish</strong> e depois em <strong>Publish to Exchange.<br><br></strong><img alt="Publish to Exchange" style="width: 873.50px" src="img/1268221f8b68a0d9.png"><br><br><img alt="Publish to Exchange" style="width: 899.50px" src="img/471ce34aa2a06704.gif"><br></li>
+<li>Uma janela pop-up para capturar os atributos que você deseja publicar no <strong>Exchange</strong> aparecerá. A maioria desses campos será pré-preenchida e o RAML será verificado para garantir que não haja erros. Preencha o campo &#34;<strong>Asset version</strong>&#34; com <strong><code>1.0.0</code></strong><strong>.<br><br></strong><img alt="module1 lab3 publish exchange tags" style="width: 723.78px" src="img/113dc50377f08f35.png"><br></li>
+<li>Clique no botão  <strong>Done</strong> quando terminar de revisar o nome da API e as informações da versão. Agora publicamos nossa API Omni Channel Experience para Anypoint Exchange para que outros desenvolvedores descubram e consumam!<br><br><img alt="module1 lab3 publish exchange success" style="width: 724.88px" src="img/38fb0aab4ef1a87f.png"><br><br>Cada vez que você publicar uma Especificação de API, você gerará dois ativos:</li>
+</ol>
+<ul>
+<li>Especificação RAML: Esta é a Especificação RAML. Todos na organização podem descobrir as especificações e a documentação.</li>
+<li>Rest Connector: Este é um conector gerado automaticamente para a API que você acabou de definir. Vamos cobrir isso com mais detalhes </li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
