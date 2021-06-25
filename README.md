@@ -48,4 +48,29 @@ gulp dist
 
 ```
 
+# Credentials
+
+Authorization Endpoint:
+
+```
+https://accounts.google.com/o/oauth2/auth?access_type=offline
+  &client_id=<client-id>
+  &redirect_uri=<redirect-url>
+  &response_type=code
+  &scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.readonly
+  &state=unused
+```
+
+###
+POST https://oauth2.googleapis.com/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=authorization_code
+&client_id=<client-id>
+&client_secret=<client-secret>
+&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.readonly
+&code=<code>
+&redirect_uri=<redirect-url>
+###
+
  
