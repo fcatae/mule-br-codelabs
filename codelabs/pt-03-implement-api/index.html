@@ -41,7 +41,7 @@
 <li>Você verá uma lista com todas as APIs, selecione <strong>Customer API</strong> e pressione <strong>Add</strong>.<img alt="module3 lab1 vcs choose project" style="width: 624.00px" src="img/a130613e98b167f4.png"></li>
 <li>Pressione <strong>Finish</strong>.</li>
 <li>Verifique se está tudo correto. Certifique-se de que o <strong>Scaffold flows from theses API specifications</strong> esteja marcado. Pressione <strong>Finish</strong>.<br><img alt="module3 lab1 check create" style="width: 624.00px" src="img/eba05bfec1025064.png"></li>
-<li>APIkit cria seu novo projeto Anypoint Studio com uma implementação gerada com base em sua especificação de API. A configuração gerada implementa o Listener HTTP de entrada, bem como todos os recursos, metadados de tipo de dados de solicitação / resposta, entre outras coisas.<br><img alt="module3 lab1 new api full" style="width: 711.33px" src="img/737b5816e3377488.png"></li>
+<li>APIkit cria seu novo projeto Anypoint Studio com uma implementação gerada com base em sua especificação de API. A configuração gerada implementa o Listener HTTP de entrada, bem como todos os recursos, metadados de tipo de dados de solicitação / resposta, entre outras coisas.<br><img alt="module3 lab1 new api full" style="width: 711.33px" src="img/4911fb8c603bbc8f.png"></li>
 </ol>
 
 
@@ -50,13 +50,13 @@
       <google-codelab-step label="Execute a API" duration="0">
         <ol type="1" start="1">
 <li>Para testar a API, vamos executá-la no Studio. Clique com o botão direito do mouse na aplicação na visualização do <strong>Package Explorer</strong>.</li>
-<li>Selecione <strong>Run as</strong>&gt; <strong>Mule Application</strong>. <img alt="module3 lab1 run mule app" style="width: 711.50px" src="img/748b2e14ced0c238.png"></li>
-<li>Cada vez que iniciamos a aplicação, precisamos ter certeza de que ele foi iniciado com sucesso. Verifique na guia <strong>Console</strong> se o projeto aparece como &#34;<strong>DEPLOYED</strong>&#34;.<br><img alt="module3 lab1 deployed" style="width: 714.97px" src="img/df11720970b0f059.png"></li>
-<li>Assim que a aplicação for deployada , o Anypoint Studio abrirá uma guia com os Consoles do APIkit onde podemos testar a aplicação (para acessar o console, basta clicar no link para abrir o console do <strong>Costumer API</strong> em um navegador).<br><img alt="module3 lab1 api console" style="width: 715.81px" src="img/e4f0dd3d86f3e424.png"><br><br><img alt="module3 lab1 api console browser" style="width: 712.25px" src="img/afb7c63038a0a0b7.png"></li>
+<li>Selecione <strong>Run as</strong>&gt; <strong>Mule Application</strong>. <img alt="module3 lab1 run mule app" style="width: 711.50px" src="img/4c13b814e63d8fd8.png"></li>
+<li>Cada vez que iniciamos a aplicação, precisamos ter certeza de que ele foi iniciado com sucesso. Verifique na guia <strong>Console</strong> se o projeto aparece como &#34;<strong>DEPLOYED</strong>&#34;.<br><img alt="module3 lab1 deployed" style="width: 714.97px" src="img/fd9bf2c6aef4b711.png"></li>
+<li>Assim que a aplicação for deployada , o Anypoint Studio abrirá uma guia com os Consoles do APIkit onde podemos testar a aplicação (para acessar o console, basta clicar no link para abrir o console do <strong>Costumer API</strong> em um navegador).<br><img alt="module3 lab1 api console" style="width: 715.81px" src="img/4a0977bff11c6109.png"><br><br><img alt="module3 lab1 api console browser" style="width: 712.25px" src="img/afb7c63038a0a0b7.png"></li>
 <li>Clique na guia <strong>POST</strong> e teste a criação do cliente.</li>
 <li>No campo Accept, preencha com <code>application / json</code></li>
 <li>Pressione o botão <strong>SEND</strong>.<br><img alt="module3 lab1 api console send" style="width: 715.46px" src="img/d13096a0db77f82d.png"></li>
-<li>Role para baixo no terceiro painel e você verá a resposta de amostra definida na especificação da API.<br><img alt="module3 lab1 api console 201" style="width: 716.59px" src="img/764d33a472386444.png"></li>
+<li>Role para baixo no terceiro painel e você verá a resposta de amostra definida na especificação da API.<br><img alt="module3 lab1 api console 201" style="width: 716.59px" src="img/3f52fdfa67cba46e.png"></li>
 <li>Vá para a guia do console e pressione o botão vermelho para parar o servidor de runtime Mule.<br><img alt="module3 lab1 studio stop mule" style="width: 624.00px" src="img/905d88f09b8dca4e.png"></li>
 </ol>
 
@@ -69,10 +69,10 @@
 <li>Com visualização da API selecionada, clique no botão <strong>Add module </strong><img alt="module3_lab2_add_module_symbol" style="width: 17.00px" src="img/df1c3aabf18eee9f.png"> para entrar na <strong>Mule Palette</strong> e adicionar o módulo Salesforce Connector.<img alt="module3 lab2 project add modules" style="width: 714.37px" src="img/15e19ff81bd5dc49.png"></li>
 <li>Arrastar e soltar o <strong>Conector Salesforce.<br></strong><img alt="module3 lab2 studio add modules finish" style="width: 719.76px" src="img/2d0f53f806248a7f.png"></li>
 <li>No final, a paleta deve ser semelhante à imagem a seguir.<br><img alt="module3 lab2 palette" style="width: 624.00px" src="img/254837570c1dc0cd.png"></li>
-<li>Agora, você está pronto para implementar a operação de recurso <strong>GET</strong>. Encontre o <strong>get: \ customer: application \ json:api-config</strong> fluxo de recursos(na parte inferior da visualização da<strong> api )<br></strong><img style="width: 713.34px" src="img/457458a05fe11e93.png"></li>
-<li>A partir da Mule Palette, selecione <strong>Salesforce, </strong>role para<strong> Query</strong> e arraste e solte o componente para o fluxo, <strong>antes</strong> do componente <strong>Transform Message.<br></strong><img style="width: 714.10px" src="img/b69cc2db474f144b.png"></li>
+<li>Agora, você está pronto para implementar a operação de recurso <strong>GET</strong>. Encontre o <strong>get: \ customer: application \ json:api-config</strong> fluxo de recursos(na parte inferior da visualização da<strong> api )<br></strong><img style="width: 713.34px" src="img/74ebd73b928f9fad.png"></li>
+<li>A partir da Mule Palette, selecione <strong>Salesforce, </strong>role para<strong> Query</strong> e arraste e solte o componente para o fluxo, <strong>antes</strong> do componente <strong>Transform Message.<br></strong><img style="width: 714.10px" src="img/89d67d0ec2db9e18.png"></li>
 <li>Clique no ícone do <strong>Salesforce</strong> e a configuração será mostrada abaixo.</li>
-<li>Mude seu nome para <code>Query Account</code><br><img style="width: 713.85px" src="img/e347087058a8c7ab.png"></li>
+<li>Mude seu nome para <code>Query Account</code><br><img style="width: 713.85px" src="img/55f12fba366743eb.png"></li>
 <li>Clique no botão <img alt="module3_lab2_save_all_button" style="width: 21.00px" src="img/4c10750ec7ebcb42.png"> <strong>Save All</strong>.</li>
 </ol>
 
@@ -81,8 +81,8 @@
     
       <google-codelab-step label="Configurar o conector do Salesforce" duration="0">
         <ol type="1" start="1">
-<li>Agora que você definiu suas propriedades, vamos definir uma nova configuração de conector. Volte para a guia <strong>Fluxo de mensagens</strong> onde  você largou anteriormente o conector do Salesforce e selecione-o.<br><img style="width: 713.59px" src="img/25e347e240cc0073.png"></li>
-<li>Clique no botão<img alt="module3_lab1_plus_button" style="width: 26.00px" src="img/b627ce3160acdff9.png"> em Configuração do Conector.<br><img style="width: 716.21px" src="img/ef773f44c2a85b10.png"></li>
+<li>Agora que você definiu suas propriedades, vamos definir uma nova configuração de conector. Volte para a guia <strong>Fluxo de mensagens</strong> onde  você largou anteriormente o conector do Salesforce e selecione-o.<br><img style="width: 713.59px" src="img/f75690027eea1218.png"></li>
+<li>Clique no botão<img alt="module3_lab1_plus_button" style="width: 26.00px" src="img/b627ce3160acdff9.png"> em Configuração do Conector.<br><img style="width: 716.21px" src="img/a5dbc450c364bc58.png"></li>
 <li>Para a configuração do conector vamos colocar as seguintes propriedades:</li>
 </ol>
 <ul>
@@ -102,14 +102,14 @@
       <google-codelab-step label="Consultar uma conta" duration="0">
         <p>Vamos configurar o conector Salesforce para consultar uma conta. Continuamos no Painel Salesforce.</p>
 <ol type="1" start="1">
-<li>Dentro do painel do conector do Salesforce, copie e cole a consulta no <strong>Salesforce query:</strong> na seção <strong>General</strong>.<br><img style="width: 624.00px" src="img/fd85992dc86119bc.png"><br></li>
+<li>Dentro do painel do conector do Salesforce, copie e cole a consulta no <strong>Salesforce query:</strong> na seção <strong>General</strong>.<br><img style="width: 624.00px" src="img/b3f04a84493f15c0.png"><br></li>
 </ol>
 <p>Este é o código de mapeamento que a imagem mostra. Você pode copiar e colá-lo no seu </p>
 <pre><code>SELECT Name, BillingStreet, BillingCity, BillingState, BillingPostalCode, BillingCountry, BillingLatitude, BillingLongitude, BillingGeocodeAccuracy, Phone, AccountNumber
 FROM Account
 WHERE BillingCountry = &#39;BR&#39;        </code></pre>
 <ol type="1" start="2">
-<li>Clique em <strong>Transform Message, </strong>você verá uma transformação Dataweave, nos painéis de entrada e saída. Você pode arrastar e soltar cada campo da solicitação (objeto Salesforce) para a saída.<img style="width: 715.26px" src="img/13702c1b909d4691.png"></li>
+<li>Clique em <strong>Transform Message, </strong>você verá uma transformação Dataweave, nos painéis de entrada e saída. Você pode arrastar e soltar cada campo da solicitação (objeto Salesforce) para a saída.<img style="width: 715.26px" src="img/43544e3d5c9846ee.png"></li>
 </ol>
 <ol type="1" start="3">
 <li>Este é o código de mapeamento que você pode usar. Você pode copiar e colar em seu editor de texto Dataweave e a UI refletirá as alterações</li>
@@ -120,18 +120,16 @@ output application/java
 [{
         Name: payload.name,
         BillingStreet: payload.billingAddress.address1,
-        BillingCity: payload.billingAddress. cidade,
+        BillingCity: payload.billingAddress.ciudad,
         BillingState: payload.billingAddress.state,
         BillingPostalCode: payload.billingAddress.postalCode,
         BillingCountry: payload.billingAddress.country,
         ShippingStreet: payload.shippingAddress.address1,
-        ShippingCity: payload.sAddress.Address.city,
-        ShippingState: payload.sAddress.Address.hipping.sate
+        ShippingCity: payload.shippingAddress.city,
         ShippingPostalCode: payload.shippingAddress.postalCode,
         ShippingCountry: payload.shippingAddress.country,
-        Phone: payload.phone,
-        AccountNumber: uuid (),
-        Account_Email__c: payload.emailbotão
+        Phone: payload.phone, AccountNumber: uuid(),
+        Account_Email__c: payload.email
 }]</code></pre>
 <ol type="1" start="10">
 <li>Clique no botão <img alt="module3_lab2_save_all_button" style="width: 21.00px" src="img/4c10750ec7ebcb42.png"> <strong>Save All</strong>.</li>
@@ -147,7 +145,7 @@ output application/java
 <li>Pressione o botão <strong>Send</strong>.</li>
 <li>A solicitação retornará<strong> 200 OK,</strong> seguido por uma lista das contas.</li>
 </ol>
-<p class="image-container"><img style="width: 714.55px" src="img/4f89a17e4d233221.png"></p>
+<p class="image-container"><img style="width: 714.55px" src="img/f0efcebfca63785b.png"></p>
 <ol type="1" start="5">
 <li>Parabéns, a aplicação está rodando com sucesso! Em minutos, uma integração com o Salesforce foi criada usando uma arquitetura API moderna.</li>
 </ol>
@@ -191,7 +189,7 @@ output application/java
     
       <google-codelab-step label="Configurar o conector do Salesforce" duration="0">
         <ol type="1" start="1">
-<li>Agora que você definiu suas propriedades, vamos definir uma nova configuração de conector. Volte para a guia <strong>Message Flow</strong> onde você deixou anteriormente o conector do Salesforce e selecione-o.<br><img alt="module3 lab2 message flow" style="width: 718.51px" src="img/e10e206f496c8587.png"></li>
+<li>Agora que você definiu suas propriedades, vamos definir uma nova configuração de conector. Volte para a guia <strong>Message Flow</strong> onde você deixou anteriormente o conector do Salesforce e selecione-o.<br><img alt="module3 lab2 message flow" style="width: 718.51px" src="img/23178ef8c38d2c0.png"></li>
 <li>Clique no botão <img alt="module3_lab1_plus_button" style="width: 26.00px" src="img/b627ce3160acdff9.png"> em Configuração do Conector.<br><img alt="module3 lab2 salesforce connector configuration" style="width: 717.94px" src="img/abf39e024d656928.png"></li>
 <li>Para a configuração do conector vamos colocar as seguintes propriedades:</li>
 </ol>
@@ -239,7 +237,7 @@ output application/java
 <ol type="1" start="4">
 <li>Pressione <strong>Done</strong> quando terminar o mapeamento.<br><img alt="module3 lab2 sfdc create mapped" style="width: 714.92px" src="img/fb9264818c04bf22.png"></li>
 <li>Clique no botão <img alt="module3_lab2_save_all_button" style="width: 21.00px" src="img/4c10750ec7ebcb42.png"> <strong>Save All</strong> Botão.</li>
-<li>Agora você criará a etapa de transformação que construirá a resposta do serviço. Para fazer isso, arraste e solte uma <strong>Transform Message</strong> após o ícone do Salesforce que foi criado na etapa anterior.<br><br><img style="width: 711.68px" src="img/dcf79b5bcf4eeb21.png"></li>
+<li>Agora você criará a etapa de transformação que construirá a resposta do serviço. Para fazer isso, arraste e solte uma <strong>Transform Message</strong> após o ícone do Salesforce que foi criado na etapa anterior.<br><br><img style="width: 711.68px" src="img/a2fb19b3a8bf60eb.png"></li>
 <li>Clique no ícone e vamos ver a transformação.<br>Você verá a resposta do SFDC e a Resposta da API.<br><img alt="module3 lab2 sfdc response" style="width: 713.09px" src="img/67544ace6166a2d.png"></li>
 <li>Copie e cole o seguinte script de dataweave:</li>
 </ol>
@@ -256,12 +254,12 @@ output application/java
     
       <google-codelab-step label="Execute a API" duration="0">
         <ol type="1" start="1">
-<li>Assim que a aplicação for deployada, o Anypoint Studio abrirá uma guia com os Consoles do APIkit onde podemos testar a aplicação    (para acessar o console, basta clicar no link para abrir o console do <strong>Customer API </strong>em um navegador).<br><br><br><img alt="module3 lab1 api console" style="width: 717.63px" src="img/e4f0dd3d86f3e424.png"><br><br><img alt="module3 lab1 api console browser" style="width: 714.91px" src="img/afb7c63038a0a0b7.png"></li>
+<li>Assim que a aplicação for deployada, o Anypoint Studio abrirá uma guia com os Consoles do APIkit onde podemos testar a aplicação    (para acessar o console, basta clicar no link para abrir o console do <strong>Customer API </strong>em um navegador).<br><br><br><img alt="module3 lab1 api console" style="width: 717.63px" src="img/4a0977bff11c6109.png"><br><br><img alt="module3 lab1 api console browser" style="width: 714.91px" src="img/afb7c63038a0a0b7.png"></li>
 <li>Clique na aba <strong>POST</strong> e teste a criação do cliente.</li>
 <li>No campo Accept, preencha com <code>application/json</code></li>
 <li>Clique em Body e modifique as informações de texto. Altere o nome, endereço, informações de contato.<strong> Importante: como estamos em um ambiente de laboratório compartilhado, não use seu endereço de e-mail real ou número de telefone nesta etapa.</strong></li>
 <li>Pressione o botão <strong>Send</strong>.<br><img alt="module3 lab1 api console send" style="width: 714.98px" src="img/d13096a0db77f82d.png"></li>
-<li>Role para baixo no terceiro painel e você verá o exemplo de resposta retornado pelo Salesforce.<br><img alt="module3 lab1 api console 201" style="width: 715.47px" src="img/764d33a472386444.png"></li>
+<li>Role para baixo no terceiro painel e você verá o exemplo de resposta retornado pelo Salesforce.<br><img alt="module3 lab1 api console 201" style="width: 715.47px" src="img/3f52fdfa67cba46e.png"></li>
 </ol>
 
 
