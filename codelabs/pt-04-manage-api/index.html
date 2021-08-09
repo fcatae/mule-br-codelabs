@@ -28,8 +28,7 @@
                   feedback-link="https://github.com/fcatae">
     
       <google-codelab-step label="Criar um Proxy para uma  API existente" duration="0">
-        <h2 is-upgraded>Visão geral</h2>
-<p>O gerenciamento de API é essencial para uma arquitetura baseada em API, pois fornece uma estrutura de governança para suas APIs em todas as três camadas. Para que o gerenciamento de API ocorra, precisamos ser capazes de hospedar nossas APIs, novas e existentes, em um gateway de API que será usado para aplicar políticas e coletar dados para análise.</p>
+        <p>O gerenciamento de API é essencial para uma arquitetura baseada em API, pois fornece uma estrutura de governança para suas APIs em todas as três camadas. Para que o gerenciamento de API ocorra, precisamos ser capazes de hospedar nossas APIs, novas e existentes, em um gateway de API que será usado para aplicar políticas e coletar dados para análise.</p>
 <p>A MuleSoft pode aplicar governança diretamente a uma API implementada pela MuleSoft ou por meio de um gateway de proxy para essas e outras APIs externas existentes.</p>
 <p>As APIs que usaremos são duas versões da API Omni Channel. Você criará um gateway de proxy para uma implementação simulada já implantada neste Laboratório 1.</p>
 <p>Agora, definiremos uma API que atuará como proxy para a API Omni Channel da Mythical Corporation. O proxy será implantado no API Gateway da Anypoint Platform, que é alimentado pelo <strong>Mule Runtime</strong>. O <strong>Mule Runtime</strong> pode ser executado  localmente, em uma nuvem privada ou no serviço CloudHub hospedado pela Anypoint Platform. Neste cenário, usaremos o último, CloudHub.</p>
@@ -41,7 +40,7 @@
     
       <google-codelab-step label="Vá para o API Manager" duration="0">
         <ol type="1" start="1">
-<li>No Anypoint Platform clique no ícone do <strong>API Manager</strong> para começar a criar sua API.<br><img alt="module 5 lab 1 click apimanager" style="width: 624.00px" src="img/1ee16e26e9f6a746.png"></li>
+<li>No Anypoint Platform clique no ícone do <strong>API Manager</strong> para começar a criar sua API.<br><img alt="module 5 lab 1 click apimanager" style="width: 624.00px" src="img/194cbd9aa088db02.png"></li>
 <li>Você também pode clicar no botão de navegação no canto superior esquerdo e, a seguir, no API Manager.<br><img alt="module 5 lab 1 ap navigationLeft" style="width: 406.00px" src="img/d76e60fe85299cc9.png"><br><img alt="module 5 lab 1 ap navigation apimanager" style="width: 305.00px" src="img/eb42c408333ef80.png"></li>
 <li>selecione SANDBOX como o ambiente</li>
 </ol>
@@ -65,7 +64,7 @@
 <li><strong>Proxy deployment target</strong>: Escolha a <code>CoudHub</code></li>
 <li><strong>Mule Version</strong>: Marque a caixa. Vamos implantar um Gateway Mule .</li>
 <li><strong>Implementation URI</strong>: <a href="http://workshop-omni-channel-mock-service-v40.cloudhub.io/api" target="_blank"><code>http://workshop-omni-channel-mock-service-v40.cloudhub.io/api</code></a></li>
-<li><strong>Path</strong>: <code>/<br></code><img alt="module 5 lab 1 api manager confgured" style="width: 565.99px" src="img/c497ab1581ea5809.png"></li>
+<li><strong>Path</strong>: <code>/<br></code><img alt="module 5 lab 1 api manager confgured" style="width: 565.99px" src="img/967c8f4e18b34ce.png"></li>
 </ol>
 <ol type="1" start="3">
 <li>Pressione <strong>Advanced options</strong> e configure:</li>
@@ -95,15 +94,23 @@
         <p>Para testar o gerenciamento de políticas, você adicionará uma política de  <strong>limitação de taxa (rate limiting)</strong>à API.</p>
 <ol type="1" start="1">
 <li>Vá para a página de administração da API Omni Channel.</li>
-<li>Clique na guia Policies nas definições de API.<br><img alt="module5 lab2 ap apimanager policies" style="width: 624.00px" src="img/368551f49dd5987.png"></li>
+<li>Clique na guia Policies nas definições de API.<br><img alt="module5 lab2 ap apimanager policies" style="width: 624.00px" src="img/6c5029185eec7288.png"></li>
 <li>Clique no <strong>Apply New Policy</strong> botão.<br><img alt="module5 lab2 ap apimanager policies applyRateLimiting1" style="width: 624.00px" src="img/3a953d23b4dc1.png"></li>
 <li>Clique em <strong>Rate Limiting</strong>, selecione a versão e <strong>Configure Policy </strong>.<br><img alt="module5 lab2 ap apimanager policies applyRateLimiting2" style="width: 624.00px" src="img/4e99a507b9d832b3.png"></li>
 <li>Insira um máximo de solicitações de 3 por 1 minuto conforme mostrado e clique em <strong>Apply</strong>.<br><img alt="module5 lab2 ap apimanager policies configRateLimiting" style="width: 624.00px" src="img/544fdfbb4d64cc63.png"><br>Você deve ver a política de limitação de taxa agora em Políticas aplicadas.<br><img alt="module 5 lab2 ap apimanager appliedPolicy ratelimiting" style="width: 624.00px" src="img/93e2b91acb0a4e27.png"></li>
 <li>Aguarde um minuto (o API Gateway recebe atualizações de política a cada 60 segundos, por padrão). Você também pode verificar se sua API recebeu a nova política olhando os registros. Procure na guia logs no <strong>Runtime Manager</strong> para sua aplicação. Procure mensagens de log semelhantes às seguintes <strong>com.mulesoft.module.policies.</strong>:<br><img alt="module5 lab2 select runtime manager" style="width: 624.00px" src="img/b12eac003f799888.png"><br><img alt="module 5 lab 1a logs" style="width: 624.00px" src="img/44c647bce5bf504a.png"></li>
-<li>Teste a API usando Postman ou qualquer outra ferramenta de teste de API e acesse seu URL de proxy adicionando / products / search no final (por exemplo, http: // &lt;username&gt; -proxy-omni-channel.us-e2.cloudhub.io/products / search).<br><img alt="module 5 lab2 browser json response ratelimiting" style="width: 624.00px" src="img/24bb56cfd7c24e72.png"></li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Teste a API" duration="0">
+        <ol type="1" start="1">
+<li>Teste a API usando Postman ou qualquer outra ferramenta de teste de API e acesse seu URL de proxy adicionando <code>/products/search</code> no final (por exemplo, http://&lt;username&gt; -proxy-omni-channel.us-e2.cloudhub.io/products/search).<br><img alt="module 5 lab2 browser json response ratelimiting" style="width: 624.00px" src="img/24bb56cfd7c24e72.png"></li>
 <li>Teste-o novamente pressionando o <strong>Send</strong> botão <strong>3 vezes</strong>.</li>
 <li>Na terceira chamada, você receberá uma mensagem de erro indicando que a <strong>cota foi excedida</strong>. Isso demonstra que sua política de limitação de taxa foi aplicada.<br><img alt="module 5 lab2 browser json response fail ratelimiting" style="width: 624.00px" src="img/305134ddeed854b6.png"></li>
 </ol>
+<p>Parabéns! Você acaba de gerenciar uma API usando Mulesoft API Manager.</p>
 
 
       </google-codelab-step>
