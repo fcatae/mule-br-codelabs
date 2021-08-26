@@ -1,0 +1,39 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-08-26T12:36:37Z",
+  "id": "pt-mysql",
+  "duration": 0,
+  "title": "Integração com Banco de Dados MySQL",
+  "authors": "Marcelo",
+  "summary": "Neste laboratório, você terá uma experiência de como consumir um Banco de Dados MySQL, através do uso de conectores nativos da plataforma Anypoint.",
+  "source": "1O55_JxqoZBySWSMHz62pjG15pfGhGz5vHMZCICpbu44",
+  "theme": "web",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "cds17",
+    "chrome-dev-summit-2016",
+    "devfest18",
+    "gdd17",
+    "io2016",
+    "io2017",
+    "io2018",
+    "io2019",
+    "jsconfeu",
+    "kiosk",
+    "pwa-dev-summit",
+    "pwa-roadshow",
+    "tag-web",
+    "typtwd17",
+    "web"
+  ],
+  "feedback": "https://github.com/googlecodelabs/your-first-pwapp/issues",
+  "url": "pt-mysql"
+}
