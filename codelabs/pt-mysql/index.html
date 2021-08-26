@@ -1,0 +1,210 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Integração com Banco de Dados MySQL</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="pt-mysql"
+                  title="Integração com Banco de Dados MySQL"
+                  environment="web"
+                  feedback-link="https://github.com/googlecodelabs/your-first-pwapp/issues">
+    
+      <google-codelab-step label="Conecte em Banco de dados MySQL no Studio" duration="0">
+        <p>Neste  laboratório, você usará o Anypoint Studio para criar uma aplicação Mule onde haverá um fluxo de integração com um conector nativo para o Banco de Dados MySQL. </p>
+<p>A implementação consistirá em algumas etapas:</p>
+<ol type="1" start="1">
+<li>Criar um novo Projeto Mule no Anypoint Studio;</li>
+<li>Executar a aplicação Mule a partir do Anypoint Studio;</li>
+<li>Testar o fluxo de integração através do Postman.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/180bbec868d55ae0.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Criar um novo projeto Mule no Anypoint Studio" duration="0">
+        <p>Nesta etapa, criaremos uma nova aplicação Mule no Anypoint Studio. Esta será a implementação da nossa API REST.</p>
+<ol type="1" start="1">
+<li>Inicie o Anypoint Studio a partir do ícone da área de trabalho.<br><img alt="module2 lab1 step1 1 studio logo" style="width: 152.74px" src="img/cb5a29df4ef7cbe1.png"><br><br></li>
+<li>Ao abrir o Studio pela primeira vez, será solicitado o <strong><em>workspace</em></strong> onde os projetos serão salvos. Selecione aquele que vem por padrão.<br><img alt="module2 lab1 choose workspace" style="width: 613.00px" src="img/8a4383910fed783e.png"><br><br></li>
+<li>Você verá a tela de boas-vindas do Anypoint Studio 7.<br><img alt="module2 lab1 step1 2 welcome screen" style="width: 624.00px" src="img/abcb651e04bda046.png"><br><br></li>
+<li>Vá até a parte inferior se quiser saber mais sobre o Studio. Depois disso, pressione <strong>Continue to Studio</strong>.</li>
+<li>No menu do Anypoint Studio, selecione <strong>File&gt; New&gt; Mule Project</strong> para criar um novo projeto Mule. Uma janela aparecerá para definir os detalhes desta nova aplicações.</li>
+</ol>
+<p class="image-container"><img style="width: 441.68px" src="img/babc9d1ccca36526.png"></p>
+<ol type="1" start="6">
+<li>Preencha o campo &#34;Project name&#34; com o nome de nosso projeto <strong>mysql.</strong></li>
+<li>Selecione o <strong>Mule Server 4.3.0 EE</strong>.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/3b3601786ba61ed3.png"></p>
+<ol type="1" start="8">
+<li>Verifique se está tudo correto. Certifique-se de que o <strong>Scaffold flows from theses API specifications</strong> esteja marcado. Pressione <strong>Finish</strong>.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Construindo a integração" duration="0">
+        <p>Agora, vamos construir nossa integração com o Banco de Dados MySQL, adicionando conectores nativos ao fluxo de integração. Cada conector adicionado, deve ser configurado preenchendo suas propriedades de acordo com as instruções deste exercício.</p>
+<ol type="1" start="1">
+<li>Verifique se seu fluxo está aberto conforme a imagem abaixo para que possamos adicionar os conectores. Caso seu fluxo esteja fechado, localize a pasta <strong>src/main/mule</strong> e dê um duplo clique no arquivo do seu fluxo para abri-lo. </li>
+</ol>
+<p class="image-container"><img style="width: 435.00px" src="img/3d0b6eca117e3b5c.png"></p>
+<ol type="1" start="2">
+<li>Uma vez com o fluxo aberto no Studio, vamos começar a adicionar os conectores que precisamos para nosso projeto de integração com o Banco de Dados MySQL.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/b2b951299905622e.png"></p>
+<ol type="1" start="3">
+<li>Clique  na paleta de conectores, no item chamado &#34;Favorites&#34; e localize o item &#34;Listener&#34;. Clique e arraste este conector para seu fluxo, soltando o clique quando estiver na área do fluxo. </li>
+</ol>
+<p class="image-container"><img style="width: 264.85px" src="img/6465e63b7a3260d0.png"></p>
+<ol type="1" start="4">
+<li>Seu projeto deverá estar parecido com a tela abaixo:</li>
+</ol>
+<p class="image-container"><img style="width: 530.93px" src="img/3768e541648006d0.png"></p>
+<ol type="1" start="5">
+<li>Agora, vamos configurar nosso conector para receber as requisições através de HTTP. Clique no conector <strong>Listener</strong> para que o Studio carregue as propriedades para preenchermos as informações, conforme abaixo:</li>
+</ol>
+<aside class="warning"><p>Display Name: mysql</p>
+<p>Path: /produtos</p>
+</aside>
+<p class="image-container"><img style="width: 624.00px" src="img/aa7af0edee4ce926.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Adicionando o conector Database ao projeto" duration="0">
+        <p>Nesta etapa, vamos executar os seguintes passos:</p>
+<ol type="1" start="1">
+<li>Volte na paleta de conectores e clique em &#34;<img alt="module3_lab2_add_module_symbol" style="width: 17.00px" src="img/df1c3aabf18eee9f.png"> Add Modules&#34;. Você poderá visualizar um item chamado &#34;Database&#34;. Clique neste item e arraste para a área(<strong>Drag and drop here to add project</strong>) ao lado dos conectores e solte o mouse.</li>
+</ol>
+<p class="image-container"><img style="width: 326.76px" src="img/732a8ec8891f9769.png"></p>
+<ol type="1" start="2">
+<li>Sua paleta de conectores deverá estar como a imagem abaixo:</li>
+</ol>
+<p class="image-container"><img style="width: 317.50px" src="img/91cba9a11668fb45.png"></p>
+<ol type="1" start="3">
+<li>Clique no item &#34;Database&#34; para que o Studio mostre todas as opções que este conector possui:</li>
+</ol>
+<p class="image-container"><img style="width: 536.50px" src="img/1595359522f3759f.png"></p>
+<ol type="1" start="4">
+<li>Mantenha o clique do mouse no item &#34;Select&#34; e arraste para seu fluxo de integração e solte este conector logo após o <strong>Listener</strong> no fluxo. Preencha as informações do conector:</li>
+</ol>
+<aside class="warning"><p>Display Name: Select</p>
+<p>SQL Query Text:</p>
+</aside>
+<pre><code>SELECT  p.id, p.name, p.description, p.product_number, p.manufactured, p.colors, p.categories, p.stock, p.safety_stock_level, p.standard_cost, p.list_price, p.size, p.size_unit_measure_code, p.weight, p.weight_unit_measure_code, p.days_to_manufacture, p.images,  p.modified_date, p.created_date
+FROM product p
+LIMIT 10</code></pre>
+<p class="image-container"><img style="width: 621.00px" src="img/625fbb110656712f.png"></p>
+<ol type="1" start="5">
+<li>Clique no botão <img alt="module3_lab1_plus_button" style="width: 26.00px" src="img/b627ce3160acdff9.png"> para terminar de configurar o conector.</li>
+<li>Selecione em &#34;Connection&#34;, o item &#34;MySQL Connection&#34;.</li>
+<li>Em &#34;Required Libraries&#34;, clique no botão &#34;Configure&#34; e escolha &#34;Add recommended Libraries&#34; .</li>
+<li>Certifique-se de escolher o drive para o MySQL e clique no botão &#39;&#39;OK&#34;.<br><br><img style="width: 624.00px" src="img/f67b50eb617e58b7.png"></li>
+</ol>
+<ol type="1" start="9">
+<li>Preencha os demais campos conforme abaixo:</li>
+</ol>
+<pre><code>Host: services.mythicalcorp.com
+Port: 3306
+user: product
+password: Mule1379
+database: products_test</code></pre>
+<ol type="1" start="10">
+<li>Clique no botão &#34;Test Connection&#34; para validar suas configurações.</li>
+<li>Caso todas as configurações estejam corretas, clique no botão &#34;OK&#34;.</li>
+</ol>
+<p class="image-container"><img style="width: 585.17px" src="img/fdfaaee8ea36b292.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Adicionando o conector Transform Message" duration="0">
+        <p>Agora que você já construiu seu fluxo, configurou as propriedades para fazer a conexão e executar uma query SQL no Banco de Dados MySQL, vamos transformar o resultado desta query para o formato JSON.</p>
+<ol type="1" start="1">
+<li>Vamos voltar na paleta de conectores e selecionar o item chamado &#34;<strong>Core</strong>&#34; e selecionar o item &#34;<strong>Transform Message</strong>&#34;, mantendo o clique e arraste até o seu fluxo. Solte este item após o conector do Banco de Dados que fizemos no passo anterior.</li>
+<li>Localize a divisão chamada &#34;Output&#34; deste conector e copie e cole o código a seguir nesta divisão.</li>
+</ol>
+<pre><code>%dw 2.0
+output application/json
+---
+payload map (product, index) -&gt; {
+    id: product.id,
+    categories: (product.categories default &#34;&#34;) splitBy &#34;,&#34;,
+    colors: (product.colors default &#34;&#34;) splitBy &#34;,&#34;,
+    createdDate: product.created_date as String {format: &#34;yyyy-MM-dd&#34;},
+    modifiedDate: product.modified_date as String {format: &#34;yyyy-MM-dd&#34;},
+    safetyStockLevel: product.safety_stock_level as Number,
+    stock: product.stock as Number,
+    daysToManufacture: product.days_to_manufacture,
+    name: product.name,
+    description: product.description,
+    images: (product.images default &#34;&#34;) splitBy &#34;,&#34;,
+    listPrice: product.list_price,
+    manufactured: product.manufactured,
+    productNumber: product.product_number,
+    size: product.size,
+    sizeUnitMeasureCode: product.size_unit_measure_code,
+    standardCost: product.standard_cost,
+    weightUnitMeasureCode: product.weight_unit_measure_code,
+    weight: product.weight
+}</code></pre>
+<ol type="1" start="3">
+<li>Sua configuração deverá ser semelhante a imagem abaixo:</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/d44a9b95afa36e3a.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Executar a integração" duration="0">
+        <ol type="1" start="1">
+<li>Para testar a integração, vamos executá-la no Studio. Clique com o botão direito do mouse na área do seu fluxo.</li>
+<li>Clique em  <strong>Run Project &lt;nome do seu fluxo&gt;</strong>.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/e0ee289c7ff353aa.png"><br></p>
+<ol type="1" start="3">
+<li>Verifique se sua integração está correta, através dos Logs que a Console do Studio apresenta para visualização.  Veja se o status do seu deploy está como &#34;<strong>DEPLOYED</strong>&#34; neste Log.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/68f2648837ea029a.png"></p>
+<ol type="1" start="4">
+<li>Assim que a aplicação estiver com o DEPLOY finalizado, você pode testar sua integração usando a ferramenta Postman.</li>
+<li>Digite o endereço &#34;<a href="http://localhost:8081/produtos" target="_blank"><strong>http://localhost:8081/produtos</strong></a>&#34; na barra de endereço e mantenha a operação usando o verbo &#34;<strong>GET</strong>&#34;.</li>
+<li>Clique no botão &#34;Send&#34; para efetuar o Request e visualizar o resultado da execução.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/fcded3813250594e.png"></p>
+<aside class="special"><p><strong>Parabéns! Você acaba de fazer uma integração com Banco de Dados MySQL em Minutos!</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
