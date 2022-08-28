@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>Design</title>
+  <title>1. Design</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
@@ -23,7 +23,7 @@
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
   <google-codelab codelab-gaid=""
                   id="pt-01-design-api"
-                  title="Design"
+                  title="1. Design"
                   environment="web"
                   feedback-link="https://github.com/fcatae">
     
@@ -35,9 +35,10 @@
 <li>Adicione sua API ao <strong>Anypoint Exchange</strong> para uso no <strong>Flow Designer</strong> ou <strong>Studio</strong></li>
 <li>Projete de acordo com as melhores práticas com uma prateleira com reconhecimento de contexto</li>
 <li>Visualize a documentação interativa gerada automaticamente no console da API</li>
-<li>Valide projetos com o serviço de simulação antes de escrever qualquer código<br></li>
+<li>Valide projetos com o serviço de simulação antes de escrever qualquer código</li>
 </ul>
-<p class="image-container"><img style="width: 630.00px" src="img/2bd2bbef082a7bc4.png"></p>
+<p>Ao final do workshop, teremos o design completo da API.</p>
+<p class="image-container"><img style="width: 630.00px" src="img/c63731d6d02a3485.png"></p>
 
 
       </google-codelab-step>
@@ -47,19 +48,22 @@
 <ol type="1" start="1">
 <li><strong>Anypoint Design Center</strong> é usado para criar suas APIs. Ao chegar na página inicial do <strong>Design Center</strong>, você verá uma lista de APIs que já foram projetadas por sua organização.</li>
 </ol>
-<p class="image-container"><img alt="Anypoint Platform Home Page" style="width: 630.00px" src="img/a41f7a8f2c02cc3.png"></p>
+<p class="image-container"><img alt="Anypoint Platform Home Page" style="width: 630.00px" src="img/f8d3c67cca924eb1.png"></p>
 <ol type="1" start="2">
 <li><strong>Anypoint Design Center</strong> é usado para criar suas APIs. Ao chegar na página inicial do <strong>Design Center</strong>, você verá uma lista de APIs que já foram projetadas por sua organização.</li>
 </ol>
-<p class="image-container"><img alt="Design Center Home" style="width: 630.00px" src="img/cb0fe7aecd68573e.png"><br></p>
+<p class="image-container"><img alt="Design Center Home" style="width: 630.00px" src="img/cae1f69759b86bd3.png"><br></p>
 <ol type="1" start="3">
-<li>Para criar uma nova API, clique no botão <strong>Create New</strong>.</li>
+<li>Para criar uma nova API, clique no botão <strong>Create New </strong>.</li>
 </ol>
-<p class="image-container"><img alt="Create Button" style="width: 630.00px" src="img/ddd8a745befd02fb.png"><br></p>
+<ul>
+<li>A instância criada não possuirá projetos, conforme a imagem abaixo</li>
+</ul>
+<p class="image-container"><img style="width: 630.00px" src="img/da902d9fd5bd1adc.png"><br></p>
 <ol type="1" start="4">
-<li>Selecione <strong>New API Spec</strong>.</li>
+<li>Selecione <strong>New API Specification</strong>. </li>
 </ol>
-<p class="image-container"><img alt="Create Button" style="width: 630.00px" src="img/6794bf370276ac3e.png"><br></p>
+<p class="image-container"><img style="width: 630.00px" src="img/8408d649d186bb47.png"></p>
 <ol type="1" start="5">
 <li>Defina os seguintes valores no formulário para Adicionar a API:</li>
 </ol>
@@ -67,11 +71,11 @@
 <li>Nome da API: <strong>&lt;username&gt; - API Omni Channel Experience</strong>.</li>
 <li>Como você deseja redigir as especificações da API? Selecione a opção <strong>Guide me through it </strong> .</li>
 </ul>
-<p class="image-container"><img alt="Create Button" style="width: 612.50px" src="img/87fd3246e82d26da.png"></p>
+<p class="image-container"><img style="width: 506.50px" src="img/7469a59fb0a22fb2.png"></p>
 <aside class="special"><p><strong>Observação: </strong>como estamos trabalhando em uma organização compartilhada, dê à sua API um nome exclusivo. Para os fins deste exercício, acrescente a sua API o nome de usuário da sua conta Anypoint.</p>
 </aside>
 <ol type="1" start="6">
-<li>Clique em <strong>Create API Spec</strong>. Isso criará a estrutura básica de sua especificação de API baseada em RAML. </li>
+<li>Clique em <strong>Create API</strong>. Isso criará a estrutura básica de sua especificação de API baseada em RAML. </li>
 </ol>
 
 
@@ -80,26 +84,26 @@
       <google-codelab-step label="Crie o recurso de lista de pedidos" duration="0">
         <p>Para fornecer a funcionalidade de tratamento de pedidos para a plataforma de comércio eletrônico, criaremos um recurso de lista em nossa API usando RAML.</p>
 <p><strong>Anypoint Design Center</strong> fornecerá um editor de API visual para começar com um tutorial passo a passo para guiá-lo através do design de sua API visualmente.</p>
-<p class="image-container"><img alt="API Editor" style="width: 630.00px" src="img/8a7e49b6dce449ef.png"><br></p>
+<p class="image-container"><img style="width: 683.94px" src="img/55da6d3649b08feb.png"><br></p>
 <ol type="1" start="1">
 <li>Vamos criar nossa API e pular o tutorial por enquanto.</li>
 <li>Vamos adicionar alguns detalhes gerais sobre a API.</li>
 </ol>
 <ul>
-<li>Nomeie a API configurando o <strong>Title</strong> como <strong><code><username> Omni Channel Experience API</code></strong><code>.</code></li>
+<li>Nomeie a API configurando o <strong>Title</strong> como <strong><code>&lt;username&gt; Omni Channel Experience API</code></strong><code>.</code></li>
 <li>Como este é nosso primeiro design, vamos designar essa API como <strong>Version </strong><code>1.0</code> . Definir versão para <code>1.0</code></li>
 <li>Defina o <strong>Media type</strong> para <code>application/json</code>.</li>
 </ul>
 <p>Agora você deve ver o seguinte em seu design de API:</p>
-<p class="image-container"><img alt="API Visual Config" style="width: 630.00px" src="img/8f85ca29ec0e2eec.png"><br><br><br></p>
+<p class="image-container"><img style="width: 630.00px" src="img/87e89fba75a6c0e5.png"></p>
 <ol type="1" start="3">
-<li>Agora você precisa adicionar um recurso. Um recurso é a definição de uma entidade que sua API irá gerenciar. Clique no <strong>+</strong> à direita de <strong>Resources  </strong>e escolha  <strong>Add resources </strong>.</li>
+<li>Agora você precisa adicionar um recurso. Um recurso é a definição de uma entidade que sua API irá gerenciar. Clique no <strong>+</strong> à direita de <strong>Resources </strong>para adicionar um novo recurso.</li>
 </ol>
-<p class="image-container"><img alt="API Add Resource" style="width: 630.00px" src="img/138a86477e40d089.png"><br><br><br></p>
+<p class="image-container"><img style="width: 687.50px" src="img/21f020b2c62ca2ca.png"></p>
 <ol type="1" start="4">
 <li>Renomeie o recurso de /new-resource para <code>/order</code>. Selecione a opção <strong>POST</strong> e  na documentação, dê uma descrição: <code>Creates a new order instance</code> conforme mostrado. Observe o RAML gerado à direita.</li>
 </ol>
-<p class="image-container"><img alt="module1 lab2 raml post" style="width: 630.00px" src="img/3c9dbef845183b59.png"></p>
+<p class="image-container"><img style="width: 683.65px" src="img/c33b1b9bb6b7715.png"></p>
 <p>Parabéns! Você concluiu a criação de um recurso <strong>/order</strong> com uma descrição básica.</p>
 
 
@@ -109,18 +113,22 @@
         <p>Na etapa anterior, criamos um recurso de coleta do pedido e o método <strong>POST</strong> para permitir que a aplicação de e-commerce crie uma nova instância do pedido. E se quiséssemos permitir que a aplicação de comércio eletrônico obtivesse o status de um único pedido? Precisamos criar um novo recurso sob a instância <strong>Order</strong> e usar o método <strong>GET</strong>.</p>
 <ol type="1" start="1">
 <li>Passe o cursor do mouse sobre o recurso <strong>/order</strong>. Você notará que um <code>+</code> aparece no painel de recursos.</li>
-<li>Renomeie <strong>/order/new-resource </strong>para <code>/order/{order_id}</code>.<br><br><img alt="module1 lab2 add nested resource" style="width: 630.00px" src="img/2dbfff36f0c22b0c.gif"><br><br></li>
-<li>Como fizemos na etapa anterior, insira uma descrição: <code>Order instance resource allowing to retrieve an order<br></code><img alt="module1 lab2 design center api orders get description" style="width: 630.00px" src="img/fe6212c0020b0797.png"><br><br></li>
-<li>No método <strong>GET</strong>, clique na guia <strong>Responses</strong> e, em seguida, clique no botão <strong>Add New Response.<br></strong><img alt="module1 lab2 design center api orders get new response" style="width: 630.00px" src="img/1f2c120bd439c76f.png"><br><br></li>
-<li>Agora você deve ver uma resposta com um código de resposta <strong>200 OK.<br></strong><img alt="module1 lab2 design center api orders get response 200" style="width: 630.00px" src="img/5f77efcb2098f5e3.png"><br><br></li>
-<li>Abaixo da resposta, clique em <strong>Add Body</strong> para adicionar uma resposta JSON ao método <strong>GET</strong>.<br><img alt="module1 lab2 get response add body" style="width: 630.00px" src="img/b62a429bd5414328.png"><br></li>
-<li>Observe a especificação <strong>RAML</strong> à direita atualizada com o corpo.<br><img alt="module1 lab2 add response body" style="width: 630.00px" src="img/a939e33a9cd6445f.png"><br><br></li>
-<li>Vamos adicionar um exemplo de JSON à resposta. Precisamos expandir a seção <strong>Bodies</strong> clicando em &#34;<strong>Details</strong>&#34;.<br><img alt="module1 lab2 expand response body" style="width: 630.00px" src="img/f8d5a09243c0f9ba.png"><br><br></li>
-<li>Depois de expandida, você verá a seção &#34;<strong>Example</strong>&#34;.<br><img alt="module1 lab2 expanded response body" style="width: 630.00px" src="img/200ccbb6ada3830.png"><br><br></li>
-<li> Em &#34;<strong>Example</strong>&#34;, clique na guia <strong>Edit</strong> e copie / cole o seguinte código JSON<br><img alt="module1 lab2 add example" style="width: 630.00px" src="img/f4ba5a7957c3e8e5.png"><br><br><br></li>
+<li>Clique no <code>+</code> para adicionar um novo recurso aninhado.</li>
+<li>Renomeie <strong>/order/new-resource </strong>para <code>/order/{order_id}</code>.<br><br><img style="width: 630.00px" src="img/a2479b40d7dae7b5.gif"><br><br></li>
+<li>Como fizemos na etapa anterior, insira uma descrição: <code>Order instance resource allowing to retrieve an order<br></code><img style="width: 681.74px" src="img/e5c4dc52fceda672.png"><br><br></li>
+<li>No método <strong>GET</strong>, clique na guia <strong>Responses</strong> e, em seguida, clique no botão <strong>Add New Response.<br></strong><img style="width: 685.56px" src="img/10d8ce57131472f1.png"><br><br></li>
+<li>Agora você deve ver uma resposta com um código de resposta <strong>200 OK.<br></strong><img style="width: 685.85px" src="img/5f847740f91224ff.png"><br><br></li>
+<li>Abaixo da resposta, clique em <strong>Add Body</strong> para adicionar uma resposta JSON ao método <strong>GET</strong>.<br><img style="width: 683.65px" src="img/de6138417a9e5fa4.png"><br></li>
+<li>Observe a especificação <strong>RAML</strong> à direita atualizada com o corpo.<br><img style="width: 685.85px" src="img/93d8e8366f6bfce3.png"><br><br></li>
+<li>Vamos adicionar um exemplo de JSON à resposta. Precisamos expandir a seção <strong>Bodies</strong> clicando em &#34;<strong>Details</strong>&#34;.</li>
+</ol>
+<p class="image-container"><img style="width: 694.21px" src="img/2144506d54205b61.png"><br></p>
+<ol type="1" start="10">
+<li>Depois de expandida, você verá a seção &#34;<strong>Example</strong>&#34;.<br><img style="width: 691.66px" src="img/c817f54001ecd789.png"><br></li>
+<li> Em &#34;<strong>Example</strong>&#34;, clique na guia <strong>Edit</strong> e copie / cole o seguinte código JSON<br><img style="width: 688.06px" src="img/3f1ec3e634c3a29c.png"><br></li>
 </ol>
 <pre><code>{
-        &#34;order_id&#34;: &#34;order_22&#34;,
+  &#34;order_id&#34;: &#34;order_22&#34;,
   &#34;tracking_code&#34;: &#34;12310391209318&#34;,
   &#34;rel_self&#34;: &#34;http://alc.mulesoft.com / api / orders / oder / order_22 &#34;,
   &#34; creation_date &#34;:&#34; 2015/12/31 10:00:00 &#34;,
@@ -151,8 +159,8 @@
       </google-codelab-step>
     
       <google-codelab-step label="Alternando entre a visualização RAML e OAS" duration="0">
-        <p>Dentro da plataforma Anypoint você pode trabalhar com RAML e OAS perfeitamente. Você pode verificar isso indo para o painel direito, onde o código de especificação é mostrado, e selecionando na parte inferior a guia <strong><code>OAS</code></strong>.<br></p>
-<p class="image-container"><img alt="module1 lab2 design center oas console" style="width: 378.00px" src="img/3e98a5bb67b72517.gif"><br></p>
+        <p>Dentro da plataforma Anypoint você pode trabalhar com RAML e OAS perfeitamente. Você pode verificar isso indo para o painel direito, onde o código de especificação é mostrado, e selecionando na parte inferior a guia <strong><code>OAS</code></strong>.</p>
+<p class="image-container"><img style="width: 405.27px" src="img/b4e66fa873a10634.gif"><br></p>
 <aside class="special"><p>Mulesoft supports OAS 3.0. The specification can be either a YAML (.yaml) or JSON (.json)<strong>.</strong></p>
 </aside>
 <p>Clique na guia <strong><code>RAML</code></strong> para continuar com a próxima etapa.</p>
@@ -161,28 +169,37 @@
       </google-codelab-step>
     
       <google-codelab-step label="Use o serviço de Mocking" duration="0">
-        <p>Um recurso muito útil durante a fase de design é permitir que seus consumidores interajam com sua API sem precisar codificar nada. O serviço de mocking é um recurso da Plataforma Anypoint. Você pode simular chamadas para a API no API Designer antes de publicar a especificação da API no Exchange ou no Exchange após publicar a especificação da API. O serviço de mocking lerá a especificação RAML de sua API, criará a API / serviço e retornará exemplos de respostas de dados. Este serviço permite que os usuários interajam com a API como se ela tivesse sido construída e implementada. Esse recurso permite que você itere rapidamente o design da API com seu consumidor para finalizar o contrato.</p>
+        <p>Um recurso muito útil durante a fase de design é permitir que seus consumidores interajam com sua API sem precisar codificar nada. O serviço de mocking é um recurso da Plataforma Anypoint. Você pode simular chamadas para a API no API Designer antes de publicar a especificação da API no Exchange ou no Exchange após publicar a especificação da API. </p>
+<p>O serviço de mocking lerá a especificação RAML de sua API, criará a API / serviço e retornará exemplos de respostas de dados. Este serviço permite que os usuários interajam com a API como se ela tivesse sido construída e implementada. Esse recurso permite que você itere rapidamente o design da API com seu consumidor para finalizar o contrato.</p>
 <p>Primeiro, vamos habilitar o serviço de mocking para uso interno.</p>
 <ol type="1" start="1">
-<li>Clique no <strong>Documentation</strong> ícone na barra de ferramentas do lado direito.</li>
-<li>No menu suspenso, selecione <strong>Summary</strong>.</li>
-<li>Clique no método <strong>Get</strong>.</li>
-<li>Clique na <strong>Select Server </strong>lista suspensa e selecione Serviço de simulação.</li>
-<li>Clique em <strong>Try it</strong>.</li>
-<li>Insira qualquer valor no <strong>order_id</strong> e pressione <strong>Send</strong>.</li>
-<li>Role para baixo e você verá uma resposta 200 com o registro do pedido em um formato JSON que segue o exemplo definido na definição da API.<br><img alt="module1 lab2 tryit results" style="width: 360.00px" src="img/26ebc5e33605e742.gif"><br>Enquanto fazemos o desenvolvimento da API, podemos deixar o serviço de mocking como o servidor padrão. Portanto, todos na organização podem testar a API.</li>
-<li>Clique em <strong>Mocking Service Configuration</strong> e clique no controle deslizante <strong>Select By Default</strong>.<br><img alt="module1 lab2 mocking service default" style="width: 416.00px" src="img/424bcdf317862999.gif"><br>Você pode eventualmente tornar o link público para que possa ser acessado por alguém de fora da Organização Anypoint.</li>
+<li>Clique no  ícone de seta ao lado direito da documentação da API</li>
 </ol>
+<p class="image-container"><img style="width: 435.50px" src="img/e302ee5ae88164e4.png"></p>
+<ol type="1" start="2">
+<li>Insira qualquer valor no <strong>order_id</strong> e pressione <strong>Send.</strong></li>
+<li>Role para baixo e você verá uma resposta 200 com o registro do pedido em um formato JSON que segue o exemplo definido na definição da API.</li>
+</ol>
+<p class="image-container"><img style="width: 376.50px" src="img/fd026e01c6c1f690.gif"></p>
+<p>Enquanto fazemos o desenvolvimento da API, podemos deixar o serviço de mocking como o servidor padrão. Portanto, todos na organização podem testar a API.</p>
+<aside class="special"><p>Você pode eventualmente tornar o link público para que possa ser acessado por alguém de fora da Organização Anypoint.</p>
+</aside>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Publique sua API no Anypoint Exchange" duration="0">
         <ol type="1" start="1">
-<li>Clique no botão <strong>Publish</strong> e depois em <strong>Publish to Exchange.<br><br></strong><img alt="Publish to Exchange" style="width: 630.00px" src="img/1268221f8b68a0d9.png"><br><br><img alt="Publish to Exchange" style="width: 630.00px" src="img/471ce34aa2a06704.gif"><br></li>
-<li>Uma janela pop-up para capturar os atributos que você deseja publicar no <strong>Exchange</strong> aparecerá. A maioria desses campos será pré-preenchida e o RAML será verificado para garantir que não haja erros. Preencha o campo &#34;<strong>Asset version</strong>&#34; com <strong><code>1.0.0</code></strong><strong>.<br><br></strong><img alt="module1 lab3 publish exchange tags" style="width: 630.00px" src="img/113dc50377f08f35.png"><br></li>
-<li>Clique no botão  <strong>Done</strong> quando terminar de revisar o nome da API e as informações da versão. Agora publicamos nossa API Omni Channel Experience para Anypoint Exchange para que outros desenvolvedores descubram e consumam!<br><br><img alt="module1 lab3 publish exchange success" style="width: 630.00px" src="img/38fb0aab4ef1a87f.png"><br><br>Cada vez que você publicar uma Especificação de API, você gerará dois ativos:</li>
+<li>Clique no botão <strong>Publish</strong> e depois em <strong>Publish to Exchange.<br><br></strong><img style="width: 686.50px" src="img/2b2a106bcbd66519.png"><br><br></li>
+<li>Uma janela pop-up para capturar os atributos que você deseja publicar no <strong>Exchange</strong> aparecerá. A maioria desses campos será pré-preenchida e o RAML será verificado para garantir que não haja erros. </li>
 </ol>
+<p>Preencha o campo &#34;<strong>Asset version</strong>&#34; com <strong><code>1.0.0</code></strong> e selecione a opção <strong><code>Development</code></strong> no campo &#34;<strong>LifeCycle State</strong>&#34;.</p>
+<p class="image-container"><img style="width: 569.50px" src="img/bf5de517c0f42f17.png"><br></p>
+<ol type="1" start="3">
+<li>Clique no botão <strong>Publish to Exchange</strong> quando terminar de revisar o nome da API, as informações da versão e o estado da API. Agora publicamos nossa API Omni Channel Experience para Anypoint Exchange para que outros desenvolvedores descubram e consumam!</li>
+</ol>
+<p class="image-container"><img style="width: 457.50px" src="img/657420e4518cf55a.png"><br></p>
+<p>Cada vez que você publicar uma Especificação de API, você gerará dois ativos:</p>
 <ul>
 <li>Especificação RAML: Esta é a Especificação RAML. Todos na organização podem descobrir as especificações e a documentação.</li>
 <li>Rest Connector: Este é um conector gerado automaticamente para a API que você acabou de definir. Vamos cobrir isso com mais detalhes </li>

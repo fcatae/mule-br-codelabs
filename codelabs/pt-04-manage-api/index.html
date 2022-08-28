@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>Manage</title>
+  <title>4. Manage</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
@@ -23,7 +23,7 @@
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
   <google-codelab codelab-gaid=""
                   id="pt-04-manage-api"
-                  title="Manage"
+                  title="4. Manage"
                   environment="web"
                   feedback-link="https://github.com/fcatae">
     
@@ -31,19 +31,26 @@
         <p>O gerenciamento de API é essencial para uma arquitetura baseada em API, pois fornece uma estrutura de governança para suas APIs em todas as três camadas. Para que o gerenciamento de API ocorra, precisamos ser capazes de hospedar nossas APIs, novas e existentes, em um gateway de API que será usado para aplicar políticas e coletar dados para análise.</p>
 <p>A MuleSoft pode aplicar governança diretamente a uma API implementada pela MuleSoft ou por meio de um gateway de proxy para essas e outras APIs externas existentes.</p>
 <p>As APIs que usaremos são duas versões da API Omni Channel. Você criará um gateway de proxy para uma implementação simulada já implantada neste Laboratório 1.</p>
-<p>Agora, definiremos uma API que atuará como proxy para a API Omni Channel da Mythical Corporation. O proxy será implantado no API Gateway da Anypoint Platform, que é alimentado pelo <strong>Mule Runtime</strong>. O <strong>Mule Runtime</strong> pode ser executado  localmente, em uma nuvem privada ou no serviço CloudHub hospedado pela Anypoint Platform. Neste cenário, usaremos o último, CloudHub.</p>
+<p>Agora, definiremos uma API que atuará como proxy para a API Omni Channel da Mythical Corporation. O proxy será implantado no API Gateway da Anypoint Platform, que é alimentado pelo <strong>Mule Runtime</strong>. O <strong>Mule Runtime</strong> pode ser executado de 3 formas: localmente, em uma nuvem privada ou no serviço CloudHub hospedado pela Anypoint Platform. Neste cenário, usaremos o último, CloudHub.</p>
 <p>Os clientes acessarão a API por meio do API Gateway, que encaminhará as solicitações para a implementação simulada da API Omni Channel real. Ter o proxy implantado no gateway de API permite que a Anypoint Platform gerencie, controle o acesso e monitore o uso da API, que veremos nos laboratórios seguintes.</p>
-<p class="image-container"><img alt="module 5 lab 1 summary diagram" style="width: 479.00px" src="img/bce8f5a32f1366c3.png"></p>
+<p class="image-container"><img alt="module 5 lab 1 summary diagram" style="width: 479.00px" src="img/6637529bb7191af1.png"></p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Vá para o API Manager" duration="0">
         <ol type="1" start="1">
-<li>No Anypoint Platform clique no ícone do <strong>API Manager</strong> para começar a criar sua API.<br><img alt="module 5 lab 1 click apimanager" style="width: 624.00px" src="img/194cbd9aa088db02.png"></li>
-<li>Você também pode clicar no botão de navegação no canto superior esquerdo e, a seguir, no API Manager.<br><img alt="module 5 lab 1 ap navigationLeft" style="width: 406.00px" src="img/d76e60fe85299cc9.png"><br><br><img alt="module 5 lab 1 ap navigation apimanager" style="width: 305.00px" src="img/eb42c408333ef80.png"></li>
-<li>selecione SANDBOX como o ambiente</li>
+<li>No Anypoint Platform clique no ícone do <strong>API Manager</strong> para começar a criar sua API.<br></li>
 </ol>
+<p class="image-container"><img alt="module 5 lab 1 click apimanager" style="width: 624.00px" src="img/4371c1313a5cf85e.png"></p>
+<ol type="1" start="2">
+<li>Você também pode clicar no botão de navegação no canto superior esquerdo e, a seguir, no API Manager.</li>
+</ol>
+<p class="image-container"><img alt="module 5 lab 1 ap navigationLeft" style="width: 359.50px" src="img/ad8c8ff94cc46562.png"><br><br><img alt="module 5 lab 1 ap navigation apimanager" style="width: 305.00px" src="img/4b85190ca4203143.png"></p>
+<ol type="1" start="3">
+<li>Selecione <strong>Sandbox</strong> como o ambiente</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/180107897fec7cfe.png"></p>
 
 
       </google-codelab-step>
@@ -52,65 +59,114 @@
         <p>Para este laboratório, vamos configurar a API como um proxy para a implementação simulada de API Omni Channel da Mythical Corporation. A API está disponível como uma API HTTP Restful acessível por meio do URL base <a href="http://workshop-omni-channel-mock-service-v40.cloudhub.io/api" target="_blank">http://workshop-omni-channel-mock-service-v40.cloudhub.io/api</a>.</p>
 <p>Para criar o proxy, vamos obter a definição de API do Exchange.</p>
 <ol type="1" start="1">
-<li>Agora vamos configurar um gateway de proxy de API para esta API. De volta à página de API Administration, clique em <strong>Manage API</strong> e selecione <strong>Manage API from Exchange</strong>.<br><img alt="module 5 lab 1 ap apimanager configureEndpoint" style="width: 624.00px" src="img/315594391e31f1be.png"><br></li>
-<li>Configure a API com as seguintes informações:</li>
+<li>Agora vamos configurar um gateway de proxy de API para esta API. De volta à página de API Administration, clique em <strong>Add API</strong> e selecione <strong>Add new API</strong>.</li>
 </ol>
-<ol type="1" start="1">
-<li><strong>API Name</strong>: <code>Omni Channel Experience API</code>.        Observe que quando você começa a escrever o nome, o campo é preenchido automaticamente.</li>
-<li><strong>Asset Type</strong>: Selecione na lista suspensa <code>RAML / OAS</code>.</li>
-<li><strong>API version</strong>: selecione na lista suspensa <code>1.0.0</code>.</li>
-<li><strong>Asset Version</strong>: Selecione na lista suspensa <code>1.0.0</code>.</li>
-<li><strong>Managing type</strong>: Selecione <code>Endpoint com proxy</code>.</li>
-<li><strong>Proxy deployment target</strong>: Escolha a <code>CoudHub</code></li>
-<li><strong>Mule Version</strong>: Marque a caixa. Vamos implantar um Gateway Mule .</li>
-<li><strong>Implementation URI</strong>: <a href="http://workshop-omni-channel-mock-service-v40.cloudhub.io/api" target="_blank"><code>http://workshop-omni-channel-mock-service-v40.cloudhub.io/api</code></a></li>
-<li><strong>Path</strong>: <code>/<br><br></code><img alt="module 5 lab 1 api manager confgured" style="width: 565.99px" src="img/967c8f4e18b34ce.png"><br></li>
+<p class="image-container"><img style="width: 496.50px" src="img/97c13cc817ccdc2.png"><br></p>
+<ol type="1" start="2">
+<li>Faça a configuração do Runtime com as seguintes informações e clique em <strong>Next</strong></li>
 </ol>
+<ul>
+<li><strong>Select runtime</strong>: <code>Mule Gateway</code></li>
+<li><strong>Proxy type</strong>: <code>Deploy a proxy application</code></li>
+<li><strong>Target type</strong>: <code>CloudHub</code></li>
+<li><strong>Runtime version</strong>: <code>4.4.0</code></li>
+<li><strong>Proxy app name</strong>: <code>[username]-proxy-omni-channel-api</code>. Este parâmetro será usado para identificar a API no API Manager.</li>
+</ul>
+<p class="image-container"><img style="width: 624.00px" src="img/672db0d0f7a996e9.png"></p>
 <ol type="1" start="3">
-<li>Pressione <strong>Advanced options</strong> e configure:</li>
+<li>Configure a API com as informações e clique em <strong>Next</strong></li>
 </ol>
-<ol type="1" start="1">
-<li><strong>Rótulo da instância da API</strong>: <code><nome do usuário> -proxy-omni-channel</code>. Este parâmetro será usado para identificar a API no API Manager.</li>
-</ol>
+<ul>
+<li><strong>Select API from Exchange</strong></li>
+<li><strong>Search API</strong>: <code>Omni Channel Experience API</code>. </li>
+<li><strong>Asset Type</strong>: Selecione na lista suspensa <code>RAML / OAS</code>.</li>
+<li><strong>API version</strong>: selecione na lista suspensa <code>1.0.0 (Latest)</code>.</li>
+<li><strong>Asset Version</strong>: selecione na lista suspensa <code>1.0.0 (Latest)</code>.</li>
+</ul>
+<p class="image-container"><img style="width: 624.00px" src="img/faf9fc0b11ae5937.png"><br></p>
 <ol type="1" start="4">
-<li>Pressione <strong>Save<br></strong>Depois de pressionar <strong>Save,</strong> a seção de configuração de implantação aparecerá para implantar o proxy.<br><img alt="module 5 lab1 api deployment config" style="width: 636.50px" src="img/5432e49dc101d38b.png"><br></li>
-<li>Configure com as seguintes informações:</li>
+<li>Configure o Endpoint e pressione <strong>Next</strong>:</li>
 </ol>
-<ol type="1" start="1">
-<li><strong>Runtime version</strong>: Selecione <code>4.3.0</code></li>
-<li><strong>Proxy application name</strong>: <code><nome do usuário> -proxy-omni-channel</code>. Esta propriedade definirá o URL do proxy e o nome da aplicação Mule no <strong>Runtime Manager</strong>.</li>
+<ul>
+<li><strong>Rótulo da instância da API</strong>: <code>[username]-proxy-omni-channel-api</code>. Este parâmetro será usado para identificar a API no API Manager.</li>
+<li><strong>Implementation URI</strong>: <code>http://[Domain-link-da-aplicação-no-CloudHub]/api</code></li>
+<li><strong>Base Path</strong>: <code>/</code></li>
+</ul>
+<p class="image-container"><img style="width: 624.00px" src="img/42cdfe823185b6d2.png"></p>
+<ol type="1" start="5">
+<li>Revise as informações da sua API antes de fazer o deploy e pressione <strong>Save &amp; Deploy</strong></li>
 </ol>
+<p class="image-container"><img style="width: 624.00px" src="img/7877beb1ec74c960.png"></p>
 <ol type="1" start="6">
-<li>Pressione o <strong>Deploy</strong> botão.</li>
-<li>Você deve ver o verde Implantação bem-sucedida na barra de status.</li>
-<li>Clique em <strong>Close</strong>.<br><img alt="module 5 lab 1 ap apimanager deployment" style="width: 475.00px" src="img/46574177ac6653bc.png"><br></li>
-<li>Depois de implementado, na parte superior da página, você verá o status da API. Deve ser verde com uma bola verde ao lado, como mostrado abaixo. Isso indica que sua API foi implantada com sucesso e agora está sendo gerenciada.<br><img alt="module 5 lab 1 ap apimanager proxypanel" style="width: 635.05px" src="img/4c8c548d51209d33.png"><br></li>
+<li>Note que a sua API ainda está listada como <code>Unregistered</code>. Para resolver isso, abra a aba de <strong>Runtime &amp; Endpoint Configuration </strong>(no final da página) para finalizar o deploy. </li>
 </ol>
+<p class="image-container"><img style="width: 624.00px" src="img/b34caa565972e020.png"><br></p>
+<ol type="1" start="7">
+<li>Confira as seguintes informações já preenchidas e pressione <strong>Save &amp; Deploy</strong></li>
+</ol>
+<ul>
+<li><strong>Runtime version</strong>: <code>4.4.0</code></li>
+<li>Proxy app name</li>
+<li>Rótulo da instância da API</li>
+<li>Implementation URI </li>
+<li>Consumer Endpoint</li>
+<li>Base Path</li>
+</ul>
+<p class="image-container"><img style="width: 624.00px" src="img/238b0030845dfffe.png"></p>
+<ol type="1" start="8">
+<li>Você deve ver uma caixa de texto &#34;<strong>Your API is being deployed to Mule 4.4.0 CloudHub</strong>&#34;. Após algum tempo (pode demorar alguns minutos) uma caixa de texto verde de implementação bem-sucedida aparece na parte superior da tela. <br></li>
+<li>Depois de implementado, note que o status da API mudou para <strong>Active</strong>, como mostrado abaixo. Isso indica que sua API foi implantada com sucesso e agora está sendo gerenciada.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/a344f46c881a2f41.png"><br></p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Aplicar políticas" duration="0">
-        <p>Para testar o gerenciamento de políticas, você adicionará uma política de  <strong>limitação de taxa (rate limiting)</strong>à API.</p>
+        <p>Para testar o gerenciamento de políticas, você irá adicionar uma política de <strong>limitação de taxa (rate limiting) </strong>à API.</p>
 <ol type="1" start="1">
-<li>Vá para a página de administração da API Omni Channel.</li>
-<li>Clique na guia Policies nas definições de API.<br><img alt="module5 lab2 ap apimanager policies" style="width: 624.00px" src="img/6c5029185eec7288.png"><br></li>
-<li>Clique no <strong>Apply New Policy</strong> botão.<br><img alt="module5 lab2 ap apimanager policies applyRateLimiting1" style="width: 624.00px" src="img/3a953d23b4dc1.png"><br></li>
-<li>Clique em <strong>Rate Limiting</strong>, selecione a versão e <strong>Configure Policy </strong>.<br><img alt="module5 lab2 ap apimanager policies applyRateLimiting2" style="width: 624.00px" src="img/4e99a507b9d832b3.png"><br></li>
-<li>Insira um máximo de solicitações de 3 por 1 minuto conforme mostrado e clique em <strong>Apply</strong>.<br><img alt="module5 lab2 ap apimanager policies configRateLimiting" style="width: 624.00px" src="img/544fdfbb4d64cc63.png"><br><br>Você deve ver a política de limitação de taxa agora em Políticas aplicadas.<br><img alt="module 5 lab2 ap apimanager appliedPolicy ratelimiting" style="width: 624.00px" src="img/93e2b91acb0a4e27.png"><br></li>
-<li>Aguarde um minuto (o API Gateway recebe atualizações de política a cada 60 segundos, por padrão). Você também pode verificar se sua API recebeu a nova política olhando os registros. Procure na guia logs no <strong>Runtime Manager</strong> para sua aplicação. Procure mensagens de log semelhantes às seguintes <strong>com.mulesoft.module.policies.</strong>:<br><img alt="module5 lab2 select runtime manager" style="width: 624.00px" src="img/b12eac003f799888.png"><br><br><img alt="module 5 lab 1a logs" style="width: 624.00px" src="img/44c647bce5bf504a.png"><br></li>
+<li>No canto esquerdo, clique na guia <strong>Policies</strong> nas definições de API.</li>
 </ol>
+<p class="image-container"><img style="width: 624.00px" src="img/8492550c348a6beb.png"><br></p>
+<ol type="1" start="2">
+<li>Clique no botão <strong>Add Policy</strong>.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/c4874522c3007bf3.png"><br></p>
+<ol type="1" start="3">
+<li>Pesquise por <strong>Rate Limiting</strong> e selecione a policy. Clique em <strong>Next</strong></li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/1792c2ecf909125d.png"><br></p>
+<ol type="1" start="4">
+<li>Insira um máximo de solicitações de 3 por 1 minuto conforme mostrado e clique em <strong>Apply</strong>.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/92f89017935c76cd.png"></p>
+<ol type="1" start="5">
+<li>Você deve ver a política de limitação de taxa agora em Políticas aplicadas.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/452b1d5246a6d519.png"><br></p>
+<ol type="1" start="6">
+<li>Aguarde um minuto (o API Gateway recebe atualizações de política a cada 60 segundos, por padrão). Você também pode verificar se sua API recebeu a nova política olhando os registros. Procure na guia <strong>logs</strong> no <strong>Runtime Manager</strong> para sua aplicação.</li>
+</ol>
+<p class="image-container"><img alt="module5 lab2 select runtime manager" style="width: 624.00px" src="img/506ad2a6a0c1a4e2.png"><br><img style="width: 116.50px" src="img/87071d43ee4827ce.png"></p>
+<ol type="1" start="7">
+<li> Procure mensagens de log semelhantes às seguintes <strong>com.mulesoft.module.policies.</strong>:</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/584f9861890fd786.png"></p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Teste a API" duration="0">
         <ol type="1" start="1">
-<li>Teste a API usando Postman ou qualquer outra ferramenta de teste de API e acesse seu URL de proxy adicionando <code>/products/search</code> no final (por exemplo, http://&lt;username&gt; -proxy-omni-channel.us-e2.cloudhub.io/products/search).<br><img alt="module 5 lab2 browser json response ratelimiting" style="width: 624.00px" src="img/24bb56cfd7c24e72.png"><br></li>
-<li>Teste-o novamente pressionando o <strong>Send</strong> botão <strong>3 vezes</strong>.</li>
-<li>Na terceira chamada, você receberá uma mensagem de erro indicando que a <strong>cota foi excedida</strong>. Isso demonstra que sua política de limitação de taxa foi aplicada.<br><img alt="module 5 lab2 browser json response fail ratelimiting" style="width: 624.00px" src="img/305134ddeed854b6.png"><br></li>
+<li>Teste a API usando Postman ou qualquer outra ferramenta de teste de API e acesse seu URL de proxy adicionando <code>/products/search</code> no final (por exemplo, http://&lt;username&gt; -proxy-omni-channel.us-e2.cloudhub.io/products/search).</li>
 </ol>
-<p>Parabéns! Você acaba de gerenciar uma API usando Mulesoft API Manager.</p>
+<p class="image-container"><img alt="module 5 lab2 browser json response ratelimiting" style="width: 624.00px" src="img/8e34c4110c382d1d.png"><br></p>
+<ol type="1" start="2">
+<li>Teste-o novamente pressionando o <strong>Send</strong> botão <strong>3 vezes</strong>.</li>
+<li>Na terceira chamada, você receberá uma mensagem de erro indicando que a <strong>cota foi excedida</strong>. Isso demonstra que sua política de limitação de taxa foi aplicada.</li>
+</ol>
+<p class="image-container"><img alt="module 5 lab2 browser json response fail ratelimiting" style="width: 624.00px" src="img/3852a48d317bba36.png"><br></p>
+<p>Parabéns! Você acaba de gerenciar uma API usando <strong>Mulesoft API Manager</strong>.</p>
 
 
       </google-codelab-step>

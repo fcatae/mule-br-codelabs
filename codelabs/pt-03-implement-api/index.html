@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>Implement</title>
+  <title>3. Implement</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
@@ -23,7 +23,7 @@
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
   <google-codelab codelab-gaid=""
                   id="pt-03-implement-api"
-                  title="Implement"
+                  title="3. Implement"
                   environment="web"
                   feedback-link="https://github.com/googlecodelabs/your-first-pwapp/issues">
     
@@ -35,7 +35,7 @@
 <li>Executar a aplicação Mule a partir do Anypoint Studio</li>
 </ol>
 <p>Em seguida, testaremos esta nova API usando o Console API.</p>
-<p class="image-container"><img style="width: 624.00px" src="img/e662c7828b279309.png"></p>
+<p class="image-container"><img style="width: 624.00px" src="img/e0dac9a96803b55a.png"></p>
 
 
       </google-codelab-step>
@@ -43,19 +43,27 @@
       <google-codelab-step label="Criar um novo projeto Mule a partir do RAML" duration="0">
         <p>Nesta etapa, criaremos uma nova aplicação  Mule no Anypoint Studio a partir da definição de RAML da API Omni Channel. Esta será a implementação da nossa API REST.</p>
 <ol type="1" start="1">
-<li>Inicie o Anypoint Studio a partir do ícone da área de trabalho.<br><img alt="module2 lab1 step1 1 studio logo" style="width: 152.74px" src="img/cb5a29df4ef7cbe1.png"><br><br></li>
-<li>Ao abrir o Studio pela primeira vez, será solicitado o <strong><em>workspace</em></strong> onde os projetos serão salvos. Selecione aquele que vem por padrão.<br><img alt="module2 lab1 choose workspace" style="width: 613.00px" src="img/8a4383910fed783e.png"><br><br></li>
-<li>Você verá a tela de boas-vindas do Anypoint Studio 7.<br><img alt="module2 lab1 step1 2 welcome screen" style="width: 624.00px" src="img/abcb651e04bda046.png"><br><br></li>
+<li>Inicie o Anypoint Studio a partir do ícone da área de trabalho.<br><img alt="module2 lab1 step1 1 studio logo" style="width: 152.74px" src="img/1b33fff455b6bf39.png"><br><br></li>
+<li>Ao abrir o Studio pela primeira vez, será solicitado o <strong><em>workspace</em></strong> onde os projetos serão salvos. Selecione aquele que vem por padrão.<br><img alt="module2 lab1 choose workspace" style="width: 613.00px" src="img/44c31b504e8c2b62.png"><br><br></li>
+<li>Você verá a tela de boas-vindas do Anypoint Studio 7.<br><img alt="module2 lab1 step1 2 welcome screen" style="width: 624.00px" src="img/435afe1038006477.png"><br><br></li>
 <li>Role até a parte inferior se quiser saber mais sobre o Studio. Depois disso, pressione <strong>Continue to Studio</strong>.</li>
-<li>No menu do Anypoint Studio, selecione <strong>File&gt; New&gt; Mule Project</strong> para criar um novo projeto Mule. Uma janela aparecerá para definir os detalhes desta nova aplicações.<br><br><img alt="module2 lab1 file new" style="width: 624.00px" src="img/40e0a07a3658d22d.png"><br><br></li>
+<li>No menu do Anypoint Studio, selecione <strong>File &gt; New &gt; Mule Project</strong> para criar um novo projeto Mule. Uma janela aparecerá para definir os detalhes desta nova aplicação.<br><br><img alt="module2 lab1 file new" style="width: 624.00px" src="img/936ff64b0ea49a8e.png"><br><br></li>
 <li>Dê ao projeto o nome <strong>omni-channel-api-v1</strong></li>
-<li>Selecione o <strong>Mule Server 4.3.0 EE</strong>.</li>
-<li>Em <strong>Import a Published API</strong> , vamos importar a RAML Spec do Exchange. Clique em <img alt="module2_lab1_plus_button" style="width: 26.00px" src="img/b627ce3160acdff9.png"> e selecione  <strong>from Exchange.<br></strong><img alt="module2 lab1 new mule api project" style="width: 624.00px" src="img/6a8a19c97142b3.png"><br><br></li>
-<li>Você verá uma lista com todas as APIs, selecione <strong>Customer API</strong> e pressione <strong>Add</strong>.<img alt="module3 lab1 vcs choose project" style="width: 624.00px" src="img/a130613e98b167f4.png"><br><br></li>
-<li>Pressione <strong>Finish</strong>.</li>
-<li>Verifique se está tudo correto. Certifique-se de que o <strong>Scaffold flows from theses API specifications</strong> esteja marcado. Pressione <strong>Finish</strong>.<br><img alt="module3 lab1 check create" style="width: 624.00px" src="img/eba05bfec1025064.png"><br><br></li>
-<li>APIkit cria seu novo projeto Anypoint Studio com uma implementação gerada com base em sua especificação de API. A configuração gerada implementa o Listener HTTP de entrada, bem como todos os recursos, metadados de tipo de dados de solicitação / resposta, entre outras coisas.<br><img alt="module3 lab1 new api full" style="width: 624.00px" src="img/4911fb8c603bbc8f.png"><br><br></li>
+<li>Selecione o <strong>Mule Server 4.4.0 EE</strong>.</li>
+<li>Em <strong>Import a published API</strong>, vamos importar a RAML Specification do Exchange. Clique em <img alt="module2_lab1_plus_button" style="width: 26.00px" src="img/b77e27c20be75b4e.png"> e selecione <strong>from Exchange.<br></strong><img alt="module2 lab1 new mule api project" style="width: 639.68px" src="img/6b6d6f66ed71dbbc.png"><br><br></li>
+<li>Clique em <strong>Add Account</strong> e faça login com a sua conta da Anypoint Platform </li>
 </ol>
+<p class="image-container"><img style="width: 356.00px" src="img/a7505033cd6f6342.png"></p>
+<ol type="1" start="10">
+<li>Você verá uma lista com todas as APIs, procure por  <strong>Customer API</strong> e pressione <strong>Add</strong>.<img alt="module3 lab1 vcs choose project" style="width: 624.00px" src="img/4a5366ee0a41c70f.png"><br><br></li>
+<li>Pressione <strong>Finish</strong>.</li>
+<li>Verifique se está tudo correto. Certifique-se de que o <strong>Scaffold flows from theses API specifications</strong> esteja marcado. Pressione <strong>Finish</strong>.</li>
+</ol>
+<p class="image-container"><img alt="module3 lab1 check create" style="width: 630.80px" src="img/8dff4b0e18e3340.png"><br><br></p>
+<ol type="1" start="13">
+<li>APIkit cria seu novo projeto Anypoint Studio com uma implementação gerada com base em sua especificação de API. A configuração gerada implementa o Listener HTTP de entrada, bem como todos os recursos, metadados de tipo de dados de solicitação / resposta, entre outras coisas.</li>
+</ol>
+<p class="image-container"><img alt="module3 lab1 new api full" style="width: 623.50px" src="img/60be8f9ea7730783.png"></p>
 
 
       </google-codelab-step>
@@ -63,14 +71,27 @@
       <google-codelab-step label="Execute a API" duration="0">
         <ol type="1" start="1">
 <li>Para testar a API, vamos executá-la no Studio. Clique com o botão direito do mouse na aplicação na visualização do <strong>Package Explorer</strong>.</li>
-<li>Selecione <strong>Run as</strong>&gt; <strong>Mule Application</strong>.<img alt="module3 lab1 run mule app" style="width: 624.00px" src="img/4c13b814e63d8fd8.png"><br><br></li>
-<li>Cada vez que iniciamos a aplicação, precisamos ter certeza de que ele foi iniciado com sucesso. Verifique na guia <strong>Console</strong> se o projeto aparece como &#34;<strong>DEPLOYED</strong>&#34;.<br><img alt="module3 lab1 deployed" style="width: 624.00px" src="img/fd9bf2c6aef4b711.png"><br><br></li>
-<li>Assim que a aplicação for deployada , o Anypoint Studio abrirá uma guia com os Consoles do APIkit onde podemos testar a aplicação (para acessar o console, basta clicar no link para abrir o console do <strong>Costumer API</strong> em um navegador).<br><img alt="module3 lab1 api console" style="width: 624.00px" src="img/4a0977bff11c6109.png"><br><br><br><br><img alt="module3 lab1 api console browser" style="width: 624.00px" src="img/afb7c63038a0a0b7.png"><br><br></li>
-<li>Clique na guia <strong>POST</strong> e teste a criação do cliente.</li>
-<li>No campo Accept, preencha com <code>application/json</code></li>
-<li>Pressione o botão <strong>SEND</strong>.<br><img alt="module3 lab1 api console send" style="width: 624.00px" src="img/d13096a0db77f82d.png"><br><br></li>
-<li>Role para baixo no terceiro painel e você verá a resposta de amostra definida na especificação da API.<br><img alt="module3 lab1 api console 201" style="width: 624.00px" src="img/3f52fdfa67cba46e.png"><br><br></li>
-<li>Vá para a guia do console e pressione o botão vermelho para parar o servidor de runtime Mule.<br><img alt="module3 lab1 studio stop mule" style="width: 624.00px" src="img/905d88f09b8dca4e.png"></li>
+<li>Selecione <strong>Run as </strong>&gt; <strong>Mule Application</strong>.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/20c5e70a2c4ad23a.png"><br></p>
+<ol type="1" start="3">
+<li>Cada vez que iniciamos a aplicação, precisamos ter certeza de que ele foi iniciado com sucesso. Verifique na guia <strong>Console</strong> se o projeto aparece como &#34;<strong>DEPLOYED</strong>&#34;.<br><img style="width: 624.00px" src="img/e7f9e8880519ff9e.png"><br><br></li>
+<li>Assim que a aplicação for &#34;deployada&#34;, o Anypoint Studio abrirá uma guia com os Consoles do APIkit onde podemos testar a aplicação (para acessar o console, basta clicar no botão <strong>Open Console</strong> para abrir o console do <strong>Customer API</strong> em um navegador).</li>
+</ol>
+<p class="image-container"><img alt="module3 lab1 api console" style="width: 640.00px" src="img/b2014f1605b15440.png"><br><br><br><br><img alt="module3 lab1 api console browser" style="width: 624.50px" src="img/bc721fcdf3bd7f78.png"><br><br></p>
+<ol type="1" start="5">
+<li>Clique na guia <strong>POST</strong> e em <strong>Try it </strong>para testar a criação do cliente.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/c46287061f12e197.png"></p>
+<p class="image-container"><img style="width: 624.00px" src="img/aa95c181d833d9bd.png"></p>
+<ol type="1" start="6">
+<li>Note que o campo Content-Type e o Accept já estão preenchidos com <code>application/json</code> por padrão </li>
+<li>Pressione o botão <strong>SEND</strong>.</li>
+</ol>
+<p class="image-container"><img style="width: 614.50px" src="img/d75f7438b6f4555d.png"><br><br></p>
+<ol type="1" start="8">
+<li>Role para baixo no último painel e você verá a resposta <strong>201 Created </strong>da amostra definida na especificação da API.<br><img style="width: 624.00px" src="img/9371aada913c4e60.png"><br><br></li>
+<li>De volta no Studio, vá para a guia do console e pressione o botão vermelho para parar o servidor de runtime Mule.<br><img alt="module3 lab1 studio stop mule" style="width: 624.00px" src="img/d18d2961d97bdeb6.png"></li>
 </ol>
 
 
@@ -79,14 +100,28 @@
       <google-codelab-step label="Adicionar o conector do Salesforce ao projeto" duration="0">
         <p>As etapas que precisam ser executadas são:</p>
 <ol type="1" start="1">
-<li>Com visualização da API selecionada, clique no botão <strong>Add module </strong><img alt="module3_lab2_add_module_symbol" style="width: 17.00px" src="img/df1c3aabf18eee9f.png"> para entrar na <strong>Mule Palette</strong> e adicionar o módulo Salesforce Connector.<img alt="module3 lab2 project add modules" style="width: 624.00px" src="img/15e19ff81bd5dc49.png"><br><br></li>
-<li>Arrastar e soltar o <strong>Conector Salesforce.<br></strong><img alt="module3 lab2 studio add modules finish" style="width: 624.00px" src="img/2d0f53f806248a7f.png"><br><br></li>
-<li>No final, a paleta deve ser semelhante à imagem a seguir.<br><img alt="module3 lab2 palette" style="width: 624.00px" src="img/254837570c1dc0cd.png"><br><br></li>
-<li>Agora, você está pronto para implementar a operação de recurso <strong>GET</strong>. Encontre o fluxo <strong>get: \ customer: application \ json:api-config</strong> (na parte inferior da visualização da<strong> api )<br></strong><img style="width: 624.00px" src="img/74ebd73b928f9fad.png"><br><br></li>
-<li>A partir da Mule Palette, selecione <strong>Salesforce, </strong>role para<strong> Query</strong> e arraste e solte o componente para o fluxo, <strong>antes</strong> do componente <strong>Transform Message.<br></strong><img style="width: 624.00px" src="img/89d67d0ec2db9e18.png"><br><br></li>
+<li>No Studio, clique no botão <strong>Add module </strong><img alt="module3_lab2_add_module_symbol" style="width: 17.00px" src="img/64ce48b8cfe758d9.png"> para entrar na <strong>Mule Palette</strong> e adicionar o módulo Salesforce Connector.</li>
+</ol>
+<p class="image-container"><img alt="module3 lab2 project add modules" style="width: 624.00px" src="img/eefb88dc552983e3.png"><br></p>
+<ol type="1" start="2">
+<li>Arrastar e soltar o <strong>Conector Salesforce.</strong></li>
+</ol>
+<p class="image-container"><img style="width: 412.50px" src="img/58323b1719fc1175.png"></p>
+<ol type="1" start="3">
+<li>No final, a paleta deve ser semelhante à imagem a seguir.</li>
+</ol>
+<p class="image-container"><img alt="module3 lab2 palette" style="width: 395.39px" src="img/cadd93cfe1e44b66.png"></p>
+<ol type="1" start="4">
+<li>Agora, você está pronto para implementar a operação de recurso <strong>GET</strong>. Encontre o fluxo <strong>get: \ customer: application \ json:api-config</strong> (na parte inferior da visualização da<strong> api )<br></strong></li>
+</ol>
+<p class="image-container"><img style="width: 452.50px" src="img/c8e9a0a808e9b024.png"><br><br></p>
+<ol type="1" start="5">
+<li>A partir da Mule Palette, selecione <strong>Salesforce, </strong>role para<strong> Query</strong> e arraste e solte o componente para o fluxo, <strong>antes</strong> do componente <strong>Transform Message.<br></strong><img style="width: 625.50px" src="img/c6b82476d8e47c69.png"><br></li>
 <li>Clique no ícone do <strong>Salesforce</strong> e a configuração será mostrada abaixo.</li>
-<li>Mude seu nome para <code>Query Account</code><br><img style="width: 624.00px" src="img/55f12fba366743eb.png"><br><br></li>
-<li>Clique no botão <img alt="module3_lab2_save_all_button" style="width: 21.00px" src="img/4c10750ec7ebcb42.png"> <strong>Save All</strong>.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/9d84e17c7ad47820.png"></p>
+<ol type="1" start="7">
+<li>Clique no botão <img alt="module3_lab2_save_all_button" style="width: 21.00px" src="img/7ffff5b2b0ccb8b.png"> <strong>Save All</strong>.</li>
 </ol>
 
 
@@ -94,8 +129,12 @@
     
       <google-codelab-step label="Configurar o conector do Salesforce" duration="0">
         <ol type="1" start="1">
-<li>Agora que você definiu suas propriedades, vamos definir uma nova configuração de conector. Volte para a guia <strong>Fluxo de mensagens</strong> onde  você largou anteriormente o conector do Salesforce e selecione-o.<br><img style="width: 624.00px" src="img/f75690027eea1218.png"><br><br></li>
-<li>Clique no botão<img alt="module3_lab1_plus_button" style="width: 26.00px" src="img/b627ce3160acdff9.png"> em Configuração do Conector.<br><img style="width: 624.00px" src="img/a5dbc450c364bc58.png"><br><br></li>
+<li>Agora que você definiu suas propriedades, vamos definir uma nova configuração de conector. Volte para a guia <strong>Fluxo de mensagens</strong> onde você largou anteriormente o conector do Salesforce e selecione-o.</li>
+<li>Renomeie o <strong>Display Name</strong> da Query Salesforce para <code>Query Account</code><br></li>
+</ol>
+<p class="image-container"><img style="width: 467.27px" src="img/af7e4052faf24682.png"></p>
+<ol type="1" start="3">
+<li>Clique no botão<img alt="module3_lab1_plus_button" style="width: 26.00px" src="img/b77e27c20be75b4e.png"> em Configuração do Conector.<br><img style="width: 624.00px" src="img/6197b2b59d5e16c.png"><br><br></li>
 <li>Para a configuração do conector vamos colocar as seguintes propriedades:</li>
 </ol>
 <ul>
@@ -105,10 +144,10 @@
 </ul>
 <aside class="special"><p><strong>TIP:</strong> Solicite as credenciais de acesso ao Salesforce ao Instrutor de Workshop</p>
 </aside>
-<ol type="1" start="4">
-<li>Pressione <strong>Test connection...</strong> para verificar se tudo está certo.<br><img style="width: 624.00px" src="img/fb3db50854111959.png"><br><br></li>
+<ol type="1" start="5">
+<li>Pressione <strong>Test connection...</strong> para verificar se tudo está certo.<br><img style="width: 624.00px" src="img/dc29b462f1f8c29a.png"><br><br></li>
 <li>Pressione <strong>OK</strong> (2 vezes).</li>
-<li>Clique no botão <img alt="module3_lab2_save_all_button" style="width: 21.00px" src="img/4c10750ec7ebcb42.png"> <strong>Save all</strong>.</li>
+<li>Clique no botão <img alt="module3_lab2_save_all_button" style="width: 21.00px" src="img/7ffff5b2b0ccb8b.png"> <strong>Save all</strong>.</li>
 </ol>
 
 
@@ -117,39 +156,42 @@
       <google-codelab-step label="Consultar uma conta" duration="0">
         <p>Vamos configurar o conector Salesforce para consultar uma conta. Continuamos no Painel Salesforce.</p>
 <ol type="1" start="1">
-<li>Dentro do painel do conector do Salesforce, copie e cole a consulta no <strong>Salesforce query:</strong> na seção <strong>General</strong>.<br><img style="width: 624.00px" src="img/b3f04a84493f15c0.png"><br><br></li>
+<li>Dentro do painel do conector do Salesforce, copie e cole a consulta no <strong>Salesforce query:</strong> na seção <strong>General</strong>.<br><img style="width: 624.00px" src="img/69c6c8674b1bf3e1.png"><br><br>Este é o código de mapeamento que a imagem mostra. Você pode copiar e colá-lo no seu Salesforce query</li>
 </ol>
-<p>Este é o código de mapeamento que a imagem mostra. Você pode copiar e colá-lo no seu Salesforce query</p>
-<pre><code>SELECT Name, BillingStreet, BillingCity, BillingState, BillingPostalCode, BillingCountry, BillingLatitude, BillingLongitude, BillingGeocodeAccuracy, Phone, AccountNumber
+<pre><code>SELECT Name, BillingStreet, ShippingStreet,ShippingCity,ShippingState,ShippingPostalCode,ShippingCountry, BillingCity, BillingState, BillingPostalCode, BillingCountry, BillingLatitude, BillingLongitude, BillingGeocodeAccuracy, Phone, AccountNumber
 FROM Account
-WHERE BillingCountry = &#39;BR&#39;        </code></pre>
+WHERE BillingCountry = &#39;USA&#39;          </code></pre>
 <ol type="1" start="2">
-<li>Clique em <strong>Transform Message, </strong>você verá uma transformação Dataweave, nos painéis de entrada (input) e saída (output). Você pode arrastar e soltar cada campo da solicitação (objeto Salesforce) para a saida.<img style="width: 624.00px" src="img/43544e3d5c9846ee.png"><br><br></li>
+<li>Clique em <strong>Transform Message, </strong>você verá uma transformação Dataweave, nos painéis de entrada (input) e saída (output). Você pode arrastar e soltar cada campo da solicitação (objeto Salesforce) para a saída.</li>
 </ol>
+<p class="image-container"><img style="width: 720.42px" src="img/9325dd69ec1d3898.png"><br></p>
 <ol type="1" start="3">
 <li>Este é o código de mapeamento que você pode usar. Você pode copiar e colar em seu editor de texto Dataweave e a UI refletirá as alterações</li>
 </ol>
 <pre><code>%dw 2.0
-output application/java
+output application/json
 ---
-[{
-        Name: payload.name,
-        BillingStreet: payload.billingAddress.address,
-        BillingCity: payload.billingAddress.city,
-        BillingState: payload.billingAddress.state,
-        BillingPostalCode: payload.billingAddress.postalCode,
-        BillingCountry: payload.billingAddress.country,
-        ShippingStreet: payload.shippingAddress.address,
-        ShippingCity: payload.shippingAddress.city,
-        ShippingState: payload.shippingAddress.state,
-        ShippingPostalCode: payload.shippingAddress.postalCode,
-        ShippingCountry: payload.shippingAddress.country,
-        Phone: payload.phone,
-        AccountNumber: uuid(),
-        Account_Email__c: payload.email
-}]</code></pre>
+payload map ( payload01 , indexOfPayload01 ) -&gt; {
+Name: payload01.Name default &#34;&#34;,
+Phone: payload01.Phone default &#34;&#34;,
+ShippingAddress: {
+                Country: payload01.ShippingCountry,
+                City: payload01.ShippingCity,
+                Street: payload01.ShippingStreet,
+                PostalCode: payload01.ShippingPostalCode,
+                State: payload01.ShippingState
+},
+BillingAddress: {
+                Country: payload01.BillingCountry,
+                City: payload01.BillingCity,
+                Street: payload01.BillingStreet,
+                PostalCode: payload01.BillingPostalCode,
+                State: payload01.BillingState
+},
+        AccountNumber: payload01.AccountNumber
+}</code></pre>
 <ol type="1" start="10">
-<li>Clique no botão <img alt="module3_lab2_save_all_button" style="width: 21.00px" src="img/4c10750ec7ebcb42.png"> <strong>Save All</strong>.</li>
+<li>Clique no botão <img alt="module3_lab2_save_all_button" style="width: 21.00px" src="img/7ffff5b2b0ccb8b.png"> <strong>Save All</strong>.</li>
 </ol>
 
 
@@ -158,14 +200,26 @@ output application/java
       <google-codelab-step label="Executar a API" duration="0">
         <ol type="1" start="1">
 <li>Para testar a API, vamos executá-la no Studio. Clique com o botão direito do mouse na aplicação na visualização do <strong>Package Explorer</strong>.</li>
-<li>Selecione <strong>Run as</strong>&gt; <strong>Mule Application</strong>.<img alt="module3 lab1 run mule app" style="width: 624.00px" src="img/4c13b814e63d8fd8.png"><br><br></li>
-<li>Cada vez que iniciamos a aplicação, precisamos ter certeza de que ele foi iniciado com sucesso. Verifique na guia <strong>Console</strong> se o projeto aparece como &#34;<strong>DEPLOYED</strong>&#34;.<br><img alt="module3 lab1 deployed" style="width: 624.00px" src="img/fd9bf2c6aef4b711.png"><br></li>
-<li>Assim que a aplicação for deployada, o Anypoint Studio abrirá uma guia com os Consoles do APIkit onde podemos testar a aplicação (para acessar o console, basta clicar no link para abrir o console da <strong>Costumer API</strong> em um navegador).<br><img alt="module3 lab1 api console browser" style="width: 624.00px" src="img/afb7c63038a0a0b7.png"><br><br></li>
-<li>Clique na aba <strong>GET</strong> e teste a consulta de clientes.</li>
-<li>Pressione o botão <strong>Send</strong>.</li>
-<li>A solicitação retornará<strong> 200 OK,</strong> seguido por uma lista das contas.</li>
+<li>Selecione <strong>Run as </strong>&gt; <strong>Mule Application</strong></li>
 </ol>
-<p class="image-container"><img style="width: 624.00px" src="img/f0efcebfca63785b.png"><br><br></p>
+<p class="image-container"><img style="width: 624.00px" src="img/20c5e70a2c4ad23a.png"><br><br></p>
+<ol type="1" start="3">
+<li>Cada vez que iniciamos a aplicação, precisamos ter certeza de que ele foi iniciado com sucesso. Verifique na guia <strong>Console</strong> se o projeto aparece como &#34;<strong>DEPLOYED</strong>&#34;.<br></li>
+</ol>
+<p class="image-container"><img alt="module3 lab1 deployed" style="width: 658.00px" src="img/f39b0a6618de4e6d.png"><br></p>
+<ol type="1" start="4">
+<li>Assim que a aplicação for deployada, o Anypoint Studio abrirá uma guia com os Consoles do APIkit onde podemos testar a aplicação (para acessar o console, basta clicar no link para abrir o console da <strong>Costumer API</strong> em um navegador).<br><img alt="module3 lab1 api console browser" style="width: 624.00px" src="img/6e19a70f0c9ff37a.png"><br><br></li>
+<li>Clique na aba <strong>GET</strong> em <strong>Try it </strong>para testar a consulta de clientes.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/754ce49dfcc49384.png"></p>
+<ol type="1" start="6">
+<li>Na parte inferior da página, pressione o botão <strong>Send</strong>.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/db584144d2e5ab06.png"></p>
+<ol type="1" start="7">
+<li>A Solicitação retornará <strong>200 OK</strong>, seguido de uma lista das contas encontradas.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/c20e967b691940d8.png"></p>
 <ol type="1" start="8">
 <li>Parabéns, a aplicação está rodando com sucesso! Em minutos, uma integração com o Salesforce foi criada usando uma arquitetura API moderna.</li>
 </ol>
@@ -176,24 +230,50 @@ output application/java
       <google-codelab-step label="Implantar a API completa no Cloudhub" duration="0">
         <p>Vamos começar:</p>
 <ol type="1" start="1">
-<li>Vamos implantá-la no Cloudhub. <strong>Clique com o botão direito no nome do projeto</strong> → <strong>Anypoint Platform</strong> → <strong>Deploy to Cloud</strong>.<br><img alt="module2 lab3 step1 1 deploy to cloudhub" style="width: 624.00px" src="img/7d1c23cb9b582f19.png"></li>
+<li>Vamos implantá-la no Cloudhub. <strong>Clique com o botão direito no nome do projeto</strong> &gt; <strong>Anypoint Platform</strong> &gt; <strong>Deploy to Cloud</strong>.</li>
+</ol>
+<p class="image-container"><img style="width: 447.00px" src="img/6f9361a662e20277.png"></p>
+<ol type="1" start="2">
 <li>Se esta é a primeira vez que implementa desta forma, um menu pop-up pede que você forneça suas credenciais de login para a plataforma Anypoint. O Studio armazena suas credenciais e as usa automaticamente na próxima vez que você implantar no CloudHub.</li>
-<li>Uma vez conectado à Plataforma Anypoint, é necessário selecionar um <strong>Environment</strong> e <strong>Business Group</strong>. Escolha o <strong>Business Group </strong>ao qual você tem acesso e selecione como ambiente <strong>Sandbox</strong>.<br><img alt="module2 lab3 step1 2 choose environmentand businessgroup" style="width: 624.00px" src="img/51596c2dd67f9f24.png"></li>
+</ol>
+<p class="image-container"><img style="width: 356.00px" src="img/a7505033cd6f6342.png"></p>
+<ol type="1" start="3">
+<li>Uma vez conectado à Plataforma Anypoint, é necessário selecionar um <strong>Environment</strong> e <strong>Business Group</strong>. Escolha o <strong>Business Group </strong>ao qual você tem acesso e selecione como ambiente <strong>Sandbox</strong>.</li>
+</ol>
+<p class="image-container"><img alt="module2 lab3 step1 2 choose environmentand businessgroup" style="width: 633.27px" src="img/921113c0cb9dc5c.png"></p>
+<ol type="1" start="4">
 <li>Agora precisamos especificar a configuração application (worker) para nossa API.</li>
 </ol>
-<ol type="1" start="1">
+<ul>
 <li>No nome da aplicação, coloque &lt;&lt;<code>MeuNome-omni-channel-api</code>&gt;&gt;. Você deverá ver uma marca de verificação verde se o nome estiver disponível. Caso contrário, use outro nome</li>
-</ol>
-<ol type="1" start="1">
-<li>Salve este nome, pois você o usará mais tarde. Um exemplo seria <strong>donald-omni-channel-api</strong></li>
-<li>Em <strong>Runtime version</strong> selecione <strong>4.3.0</strong></li>
-<li>Em <strong>Worker Size,</strong> selecione <strong><code>0.1 vCore</code></strong> e <strong><code>SANDBOX</code></strong> como ambiente.<br><img alt="module2 lab3 step1 3 deploy runtime manager" style="width: 624.00px" src="img/515818792f402a83.png"></li>
-</ol>
+<li>Salve este nome, pois você o usará mais tarde. </li>
+<li>Um exemplo seria <strong>donald-omni-channel-api</strong></li>
+<li>Em <strong>Runtime version</strong> selecione <strong>4.4.0</strong></li>
+<li>Em <strong>Worker Size,</strong> selecione <strong><code>0.1 vCore</code></strong>.</li>
+</ul>
+<p class="image-container"><img alt="module2 lab3 step1 3 deploy runtime manager" style="width: 565.74px" src="img/a3defe3221a014b7.png"></p>
 <ol type="1" start="5">
-<li>Depois de concluída a configuração, clique no botão <strong>Deploy Application</strong> .</li>
-<li>Assim que a implantação for concluída (pode levar alguns minutos), você pode navegar no Console da API em http: // &lt;&lt;username-omni-channel-api&gt;&gt;. &lt;region&gt; .cloudhub.io / console /.</li>
-<li>No exemplo anterior, seria algo como <a href="http://donald-omni-channel-api.us-e2.cloudhub.io/console/" target="_blank">http://donald-omni-channel-api.us-e2.cloudhub.io/console/</a>.<br><img alt="module2 lab3 step1 4 api console" style="width: 624.00px" src="img/76045883e6770d2a.png"><br>Parabéns!. Agora você tem uma <strong>API Omni Channel </strong>totalmente funcional e sua.</li>
+<li>Depois de concluída a configuração, clique no botão <strong>Deploy Application</strong>.</li>
+<li>Enquanto a implantação é concluída (pode levar alguns minutos), você consegue observar a aplicação no Runtime Manager. Basta clicar em <strong>Open in Browser</strong> na janela pop-up de deploy</li>
 </ol>
+<p class="image-container"><img style="width: 624.00px" src="img/b2da7b039fcebeb5.png"></p>
+<p class="image-container"><img style="width: 624.00px" src="img/2f16dbb3d2ac3f25.png"></p>
+<ol type="1" start="7">
+<li>Clique no <strong>link</strong> do domínio da sua aplicação. </li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/4b33e5e12e2b3e15.png"></p>
+<ol type="1" start="8">
+<li>Você será redirecionado para a seguinte página com a mensagem: </li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/7a0f6a685abcb1f2.png"></p>
+<ol type="1" start="9">
+<li>Você pode navegar no Console da API adicionando /console ao final da URL</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img/f56a72642dceaf85.png"></p>
+<ol type="1" start="10">
+<li>No exemplo anterior, seria algo como: <a href="http://donald-omni-channel-api.us-e2.cloudhub.io/console/" target="_blank">donald-omni-channel-api.us-e2.cloudhub.io/console</a></li>
+</ol>
+<p>Parabéns! Agora você tem uma <strong>API Omni Channel </strong>totalmente funcional e sua.</p>
 
 
       </google-codelab-step>
